@@ -1,0 +1,99 @@
+Savannah
+
+## Savannah
+
+## Week 1
+
+excel
+
+(note that I was not able to upload the photos to here)
+## Wednesday
+
+
+ACCESS THE WEB VERSION OF EXCEL THROUGH ONEDRIVE
+
+-cell is identified by a column letter and row number and holds a piece of data.
+
+-column is a vertical set of cells, identified by a letter.
+
+-row is a horizontal set of cells, identified by a number.
+
+    BASIC FUNCTIONS
+
+=SUM() =AVERAGE() =MAX() =MIN()
+
+    EXCEL NOTES
+
+double click corner of box around a cell to make the formula go apply to the whole column
+
+use control to select multiple specific cells/columns
+
+shift right control down to select
+
+use <> to input a link in Quarto document
+
+use to input a screenshot in a Quarto document MUST BE IN THE SAME FOLDER
+
+    BASIC PLOTS
+
+SCATTER PLOT EXAMPLE
+
+### Friday
+
+
+
+My data set is Rates of COVID-19 Cases or Deaths by Age Group and Vaccination Status from the Centers for Disease Control and Prevention website.
+
+    DESCRIPTION OF DATA SET
+
+This data set was posted on October 21, 2022 and was revised on February 22, 2023. The data reflect cases among people with a positive specimen collection date through September 24, 2022, and deaths among people with a positive specimen collection date through September 3, 2022.
+
+The data was provided by the CDC COVID-19 Response, Epidemiology Task Force.
+
+This data set has 1,591 rows and 16 columns.
+
+    COLUMNS IN DATA SET
+
+OUTCOME: case or death (text)
+
+MONTH: corresponding month to the MMWR week- MMM YYYY (text)
+
+MMWR week: the morbidity and mortality weekly report- YYYYWW (text)
+
+AGE GROUP: 0-5 (4 yrs), 5-11, 12-17, 18-29, 30-49, 50-64, 65-70, 80+ (text)
+
+VACCINE PRODUCT: Janssen, Moderna, Pfizer, all (text)
+
+VACCINATED WITH OUTCOME: weekly count of vaccinated individuals that correspond with an outcome (number)
+
+FULLY VACCINATED POPULATION: cumulative weekly count of the population vaccinated (number)
+
+UNVACCINATED WITH OUTCOME: weekly count of unvaccinated individuals that correspond with an outcome (number)
+
+UNVACCINATED POPULATION: cumulative weekly count of the population un-vaccinated (number)
+
+CRUDE VAX IR: incident rate for vaccinated population per 100,000 (number)
+
+CRUDE UNVAX IR: incident rate for un-vaccinated population per 100,000 (number)
+
+CRUDE IRR: incident rate ratio (un-vaccinated : vaccinated) (number)
+
+AGE ADJUSTED VAX IR: incident rate by age for vaccinated population per 100,000 (number)
+
+AGE ADJUSTED UNVAX IR: incident rate by age for un-vaccinated population per 100,000 (number)
+
+AGE ADJUSTED CRUDE IRR: incident rate ratio by age (un-vaccinated : vaccinated) (number)
+
+CONTINUITY CORRECTION: indicates whether the data was adjusted with the assumption that at least 5 percent of the population in the jurisdiction is un-vaccinated (number)
+
+dataset link: https://data.cdc.gov/Public-Health-Surveillance/Rates-of-COVID-19-Cases-or-Deaths-by-Age-Group-and/3rge-nu2a/about_data
+
+    VISUALIZATIONS IN EXCEL OF DATASET
+
+HISTOGRAM
+
+This visualization shows the weekly count of vaccinated individuals who have either the outcome of a case of covid or death by covid, grouped by age.
+
+LINE PLOT
+
+This visualization shows a cumulative weekly count of the fully vaccinated population (teal) versus the un-vaccinated population (orange).

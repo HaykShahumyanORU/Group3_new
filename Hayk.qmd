@@ -1,0 +1,68 @@
+Hayk
+
+## Hayk
+
+## Week 1
+
+Excel
+
+### Wednesday
+
+I spent about 30 mins to an hour working through the VIZ_basic-excel-web excel practice page and did everything until the homework tab which requires me to do a different data set. So all steps 1 through 6 including all the basic functions, how to filter out tools that were not necessary, how to adjust inputted graphs and visualizations, and how to add in all the different visualizations were completed.
+
+
+since this was my first time learning how to use quarto after finishing all the excel practices from Monday, I have not explained each individual tool I practiced since I have completed them all already.
+
+![](Screenshot 2024-08-28 145847.png)
+
+### Friday
+
+
+Today I have chosen my data set. My data set has a large collection of data, which holds data of modeled medium and heavy duty vehicle with info on their stock, sales, energy consumption, greenhouse gas emissions, and total cost of driving. I have chosen to do vehicle sales as my dataset for today. Chatgpt recommends these areas for the inserts 1. Total Vehicle Sales by Year and Vehicle Class
+
+    Graph Type: Stacked Bar Chart
+    Purpose: This will show how the sales of different vehicle classes contribute to the total sales each year, and how the sales have changed over the years.
+    X-axis: Year (2023, 2024, 2025, 2026)
+    Y-axis: Vehicle Sales (in thousands)
+    Stacked Bars: Light-Medium (Class 3), Medium (Classes 4-6), Heavy (Classes 7-8)
+
+2. Trend of Vehicle Sales by Vehicle Class Over Time
+
+    Graph Type: Line Chart
+    Purpose: To visualize the trend of sales for each vehicle class over the years.
+    X-axis: Year (2023, 2024, 2025, 2026)
+    Y-axis: Vehicle Sales (in thousands)
+    Lines: Separate lines for Light-Medium (Class 3), Medium (Classes 4-6), and Heavy (Classes 7-8)
+
+3. Yearly Distribution of Vehicle Sales Across Classes
+
+    Graph Type: Pie Charts (for each year)
+    Purpose: To show the percentage share of each vehicle class in total sales for each year.
+    Slices: Light-Medium (Class 3), Medium (Classes 4-6), Heavy (Classes 7-8)
+
+4. Comparison of Vehicle Sales Growth Between Classes
+
+    Graph Type: Grouped Bar Chart
+    Purpose: To compare how much each vehicle class has grown or declined in sales from year to year.
+    X-axis: Year (2023, 2024, 2025, 2026)
+    Y-axis: Vehicle Sales (in thousands)
+    Bars: Separate bars for Light-Medium (Class 3), Medium (Classes 4-6), and Heavy (Classes 7-8), grouped by year.
+
+5. Sales Proportion Change Over Years for Each Vehicle Class
+
+    Graph Type: 100% Stacked Area Chart
+    Purpose: To show how the proportion of sales for each vehicle class has changed over the years.
+    X-axis: Year (2023, 2024, 2025, 2026)
+    Y-axis: Percentage of Total Sales (%)
+    Areas: Light-Medium (Class 3), Medium (Classes 4-6), Heavy (Classes 7-8)
+
+Recommended Chart: Total Vehicle Sales by Year and Vehicle Class (Stacked Bar Chart)
+
+This chart provides a clear visual comparison of vehicle sales over the years and how each class contributes to the total sales.
+
+![](Screenshot 2024-08-31 223809.png)
+
+
+this graph shows us that the light-medium vehicles are the ones that were sold the most from the large amount of data
+
+![](Screenshot 2024-08-31 224111.png)

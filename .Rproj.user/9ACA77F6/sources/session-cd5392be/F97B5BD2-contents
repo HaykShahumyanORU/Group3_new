@@ -1,0 +1,24 @@
+project:
+  type: book
+
+book:
+  title: "Group3"
+  author: "Norah Jones"
+  date: "8/30/2024"
+  chapters:
+  - index.qmd
+  - Hayk.qmd
+  - Pratiti.qmd
+  - Savannah.qmd
+  - Shae.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+

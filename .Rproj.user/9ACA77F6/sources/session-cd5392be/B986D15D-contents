@@ -1,0 +1,45 @@
+---
+title: "Week 2, Excel PivotTable + Chart"
+author: "Shahumyan"
+---
+
+## Wednesday
+
+## Histogram
+
+I am using the airquality dataset, which is ...
+
+
+I use excel to clean the data, remove all the rows which have NA values, and I did an exploration analysis
+
+### Ozone Histogram
+
+![](Screenshot 2024-09-04 144849.png)
+
+### Ozone vs Temp
+
+![](Screenshot 2024-09-04 145425.png)
+### which day out of all the months had the most solar R
+
+![](Screenshot 2024-09-04 152000.png)
+
+
+## friday
+
+Today I am learning about pivot charts which are extended from pivot tables. To get to my insert chart I selected all of my pivot table and near the insert tab there was an option for a pivot chart.
+
+![](Screenshot 2024-09-06 144851.png)
+
+
+This graph shows how for each day for each month, the ratio of each value. For example, for each month you can start to see the temperature changes between each day within each month. You can see which days have more average Ozone, and which days have an increase of solar Radiation. We can see how when there is an increase in temperature, there is less solar radiation which I find interesting. there was a day on the 8th month where there seemed to be no solar radiation and only an increased average temp and increased ozone.
+
+
+
+
+
+
+
+
+
+
+

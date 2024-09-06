@@ -1,0 +1,132 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Group3",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nIt holds all the data for group 3",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "Hayk.html",
+    "href": "Hayk.html",
+    "title": "1  Hayk",
+    "section": "",
+    "text": "1.1 Week 1\nExcel",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
+    ]
+  },
+  {
+    "objectID": "Hayk.html#week-1",
+    "href": "Hayk.html#week-1",
+    "title": "1  Hayk",
+    "section": "",
+    "text": "1.1.1 Wednesday\nI spent about 30 mins to an hour working through the VIZ_basic-excel-web excel practice page and did everything until the homework tab which requires me to do a different data set. So all steps 1 through 6 including all the basic functions, how to filter out tools that were not necessary, how to adjust inputted graphs and visualizations, and how to add in all the different visualizations were completed.\nsince this was my first time learning how to use quarto after finishing all the excel practices from Monday, I have not explained each individual tool I practiced since I have completed them all already.\n\n\n\n1.1.2 Friday\nToday I have chosen my data set. My data set has a large collection of data, which holds data of modeled medium and heavy duty vehicle with info on their stock, sales, energy consumption, greenhouse gas emissions, and total cost of driving. I have chosen to do vehicle sales as my dataset for today. Chatgpt recommends these areas for the inserts 1. Total Vehicle Sales by Year and Vehicle Class\nGraph Type: Stacked Bar Chart\nPurpose: This will show how the sales of different vehicle classes contribute to the total sales each year, and how the sales have changed over the years.\nX-axis: Year (2023, 2024, 2025, 2026)\nY-axis: Vehicle Sales (in thousands)\nStacked Bars: Light-Medium (Class 3), Medium (Classes 4-6), Heavy (Classes 7-8)\n\nTrend of Vehicle Sales by Vehicle Class Over Time\nGraph Type: Line Chart Purpose: To visualize the trend of sales for each vehicle class over the years. X-axis: Year (2023, 2024, 2025, 2026) Y-axis: Vehicle Sales (in thousands) Lines: Separate lines for Light-Medium (Class 3), Medium (Classes 4-6), and Heavy (Classes 7-8)\nYearly Distribution of Vehicle Sales Across Classes\nGraph Type: Pie Charts (for each year) Purpose: To show the percentage share of each vehicle class in total sales for each year. Slices: Light-Medium (Class 3), Medium (Classes 4-6), Heavy (Classes 7-8)\nComparison of Vehicle Sales Growth Between Classes\nGraph Type: Grouped Bar Chart Purpose: To compare how much each vehicle class has grown or declined in sales from year to year. X-axis: Year (2023, 2024, 2025, 2026) Y-axis: Vehicle Sales (in thousands) Bars: Separate bars for Light-Medium (Class 3), Medium (Classes 4-6), and Heavy (Classes 7-8), grouped by year.\nSales Proportion Change Over Years for Each Vehicle Class\nGraph Type: 100% Stacked Area Chart Purpose: To show how the proportion of sales for each vehicle class has changed over the years. X-axis: Year (2023, 2024, 2025, 2026) Y-axis: Percentage of Total Sales (%) Areas: Light-Medium (Class 3), Medium (Classes 4-6), Heavy (Classes 7-8)\n\nRecommended Chart: Total Vehicle Sales by Year and Vehicle Class (Stacked Bar Chart)\nThis chart provides a clear visual comparison of vehicle sales over the years and how each class contributes to the total sales.\n\nthis graph shows us that the light-medium vehicles are the ones that were sold the most from the large amount of data",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
+    ]
+  },
+  {
+    "objectID": "Pratiti.html",
+    "href": "Pratiti.html",
+    "title": "2  Pratiti",
+    "section": "",
+    "text": "2.1 Week 1\nExcel",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
+    ]
+  },
+  {
+    "objectID": "Pratiti.html#week-1",
+    "href": "Pratiti.html#week-1",
+    "title": "2  Pratiti",
+    "section": "",
+    "text": "2.1.1 Wednesday\n\n\n2.1.2 Basic Functions\nI can now use sum, average, and more functions to select a whole row and make the process more efficient for large datasets.\n\n\n2.1.3 Basic Visualizations\nThrough using the insert tab, I learned how to choose to represent data with a scatterplot, line plot, bar chart, and more. To customize and format the histogram is easily done in Excel. Each axis can be labeled for the person viewing to understand.\n\n\n2.1.4 Scatter Plot\n\nFrom the Dataset, we see a trend that as the age of the tree increases, the circumference also increases. This is consistent for different types of trees and helps us see into history of how long a tree survived. Another method is also to count the rings once the tree is cut down. However, using the circumference gives a qualitative measurement of when the tree can still be alive and aged.\n\n\n2.1.5 Friday\nThe US Bureau of Labor and Statistics offers many data sets to do with the work force in America. This data is found from civilian unemployment rates over the past 10 years including people of different ethnicity.\n\nThe visualization shows there is a peak in unemployment rate in the year 2020-2021 when Covid-19 affected everyday lives of civilians. This graph represents the unemployment dramatic decrease during the pandemic, but also stabilization in 2022.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
+    ]
+  },
+  {
+    "objectID": "Savannah.html",
+    "href": "Savannah.html",
+    "title": "3  Savannah",
+    "section": "",
+    "text": "3.1 Week 1\nexcel\n(note that I was not able to upload the photos to here) ## Wednesday\nACCESS THE WEB VERSION OF EXCEL THROUGH ONEDRIVE\n-cell is identified by a column letter and row number and holds a piece of data.\n-column is a vertical set of cells, identified by a letter.\n-row is a horizontal set of cells, identified by a number.\n=SUM() =AVERAGE() =MAX() =MIN()\ndouble click corner of box around a cell to make the formula go apply to the whole column\nuse control to select multiple specific cells/columns\nshift right control down to select\nuse &lt;&gt; to input a link in Quarto document\nuse to input a screenshot in a Quarto document MUST BE IN THE SAME FOLDER\nSCATTER PLOT EXAMPLE",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
+    ]
+  },
+  {
+    "objectID": "Savannah.html#week-1",
+    "href": "Savannah.html#week-1",
+    "title": "3  Savannah",
+    "section": "",
+    "text": "BASIC FUNCTIONS\n\nEXCEL NOTES\n\n\n\n\n\nBASIC PLOTS\n\n\n3.1.1 Friday\nMy data set is Rates of COVID-19 Cases or Deaths by Age Group and Vaccination Status from the Centers for Disease Control and Prevention website.\nDESCRIPTION OF DATA SET\nThis data set was posted on October 21, 2022 and was revised on February 22, 2023. The data reflect cases among people with a positive specimen collection date through September 24, 2022, and deaths among people with a positive specimen collection date through September 3, 2022.\nThe data was provided by the CDC COVID-19 Response, Epidemiology Task Force.\nThis data set has 1,591 rows and 16 columns.\nCOLUMNS IN DATA SET\nOUTCOME: case or death (text)\nMONTH: corresponding month to the MMWR week- MMM YYYY (text)\nMMWR week: the morbidity and mortality weekly report- YYYYWW (text)\nAGE GROUP: 0-5 (4 yrs), 5-11, 12-17, 18-29, 30-49, 50-64, 65-70, 80+ (text)\nVACCINE PRODUCT: Janssen, Moderna, Pfizer, all (text)\nVACCINATED WITH OUTCOME: weekly count of vaccinated individuals that correspond with an outcome (number)\nFULLY VACCINATED POPULATION: cumulative weekly count of the population vaccinated (number)\nUNVACCINATED WITH OUTCOME: weekly count of unvaccinated individuals that correspond with an outcome (number)\nUNVACCINATED POPULATION: cumulative weekly count of the population un-vaccinated (number)\nCRUDE VAX IR: incident rate for vaccinated population per 100,000 (number)\nCRUDE UNVAX IR: incident rate for un-vaccinated population per 100,000 (number)\nCRUDE IRR: incident rate ratio (un-vaccinated : vaccinated) (number)\nAGE ADJUSTED VAX IR: incident rate by age for vaccinated population per 100,000 (number)\nAGE ADJUSTED UNVAX IR: incident rate by age for un-vaccinated population per 100,000 (number)\nAGE ADJUSTED CRUDE IRR: incident rate ratio by age (un-vaccinated : vaccinated) (number)\nCONTINUITY CORRECTION: indicates whether the data was adjusted with the assumption that at least 5 percent of the population in the jurisdiction is un-vaccinated (number)\ndataset link: https://data.cdc.gov/Public-Health-Surveillance/Rates-of-COVID-19-Cases-or-Deaths-by-Age-Group-and/3rge-nu2a/about_data\nVISUALIZATIONS IN EXCEL OF DATASET\nHISTOGRAM\nThis visualization shows the weekly count of vaccinated individuals who have either the outcome of a case of covid or death by covid, grouped by age.\nLINE PLOT\nThis visualization shows a cumulative weekly count of the fully vaccinated population (teal) versus the un-vaccinated population (orange).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html",
+    "href": "Shae.html",
+    "title": "4  Shae",
+    "section": "",
+    "text": "4.1 Week 1\nexcel\n(Shae did not give which days she worked on which things so this is grouped)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#week-1",
+    "href": "Shae.html#week-1",
+    "title": "4  Shae",
+    "section": "",
+    "text": "4.1.1 Monday through Saturday\nTutorial on excel function, sum,average. Go here &lt;\nCell is…… column is… row is….\n##Basic Functions\nsum =sum(cell:cell)\nScatter Plot Insert graph by the insert tab adding a screenshot into a quarto",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#our-own-document",
+    "href": "Shae.html#our-own-document",
+    "title": "4  Shae",
+    "section": "4.2 Our own document",
+    "text": "4.2 Our own document\nmtcars",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#using-the-xcensus-data",
+    "href": "Shae.html#using-the-xcensus-data",
+    "title": "4  Shae",
+    "section": "4.3 Using the x,Census Data",
+    "text": "4.3 Using the x,Census Data\nhttps://data.census.gov/table/ACSST1Y2018.S1701?q=poverty%20in%20california%20in%202018 This is where I got the data from\nIt is a census of the poverty levels in California in the year of 2018",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#cleaning",
+    "href": "Shae.html#cleaning",
+    "title": "4  Shae",
+    "section": "4.4 Cleaning",
+    "text": "4.4 Cleaning\nI removed the ratios as it only had the total popualtion seperated by age which was just a reiteration of the first few rows\nthere was an option of including the marginal error and I chose against that. I did not believe it was vital in explaining my data.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#explanation",
+    "href": "Shae.html#explanation",
+    "title": "4  Shae",
+    "section": "4.5 Explanation",
+    "text": "4.5 Explanation\nThis data is has 71 rows, which divides my data into groups that are in the category of age, sex, race,highest level of education,employment status, work experience,and UNRELATED INDIVIDUALS FOR WHOM POVERTY STATUS IS DETERMINED\nThis data is has 4 columns that are filled with label and three estimate, each estimate is separated into the total in the group identified in the row and the amount that is below poverty as well as the percentage of the amount below poverty compared to the total in the category highlighted in the rows.\n  The above are the visualizations I chose to do to explain my data. The first is the distribution of poverty levels by gender to get a better understaning of the poverty levels in each gender before we break it up even further\nThe second is by age and I chosse to include the overall population of each age group to understand the poverty levels against the overall population\nI also then made a pivot table chart with the education levels which makes the chart interchangeable and I can single out each education levels poverty rate\nThe 4th is among ethnicity if I continue using this data set the poverty among ethnicity is very important to understand and I also used a pie chart because it was the easiest to see which ethnicity has the most and compare them against one another.\nTotal homeless population against the total population just helps understand the overall populations of both before the deep dive\nLastly i just did the poverty levels against age without the total population because I believe age is the best way to describe the poverty levels.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  }
+]

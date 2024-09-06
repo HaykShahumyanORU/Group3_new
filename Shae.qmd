@@ -1,0 +1,67 @@
+Shae
+
+## Shae
+
+## Week 1
+
+excel
+
+(Shae did not give which days she worked on which things so this is grouped)
+
+### Monday through Saturday
+
+Tutorial on excel function, sum,average.
+Go here <
+
+Cell is......
+column is...
+row is....
+
+##Basic Functions
+
+**sum**
+=sum(cell:cell)
+
+**Scatter Plot**
+Insert graph by the insert tab 
+adding a screenshot into a quarto 
+
+![](Scatter1.png)
+
+## Our own document 
+mtcars
+
+## Using the x,Census Data 
+<https://data.census.gov/table/ACSST1Y2018.S1701?q=poverty%20in%20california%20in%202018>
+This is where I got the data from 
+
+It is a census of the poverty levels in California in the year of 2018 
+
+## Cleaning
+I removed the ratios as it only had the total popualtion seperated by age which was just a reiteration of the first few rows 
+
+there was an option of including the marginal error and I chose against that. I did not believe it was 
+vital in explaining my data.
+
+## Explanation
+This data is has 71 rows, which divides my data into groups that are in the category of age, sex,
+race,highest level of education,employment status, work experience,and UNRELATED INDIVIDUALS FOR WHOM POVERTY STATUS IS DETERMINED
+
+This data is has 4 columns that are filled with label and three estimate, each estimate is separated into the total
+in the group identified in the row and the amount that is below poverty as well as the percentage of the amount below poverty compared to the total in the category highlighted in the rows.
+
+![](Plots1.png)
+![](Plots2.png)
+The above are the visualizations I chose to do to explain my data.
+The first is the distribution of poverty levels by gender to get a better understaning of the poverty levels in each gender before we break it up even further 
+
+The second is by age and I chosse to include the overall population of each age group to understand the poverty levels against the overall population
+
+I also then made a pivot table chart with the education levels which makes the chart interchangeable and I can single out each education levels poverty rate
+
+The 4th is among ethnicity if I continue using this data set the poverty among ethnicity is very important to understand and I also used a pie chart because it was the easiest to see which ethnicity has the most and compare them against one another.
+
+Total homeless population against the total population just helps understand the overall populations of both before the deep dive 
+
+Lastly i just did the poverty levels against age without the total population because I believe age is the best way to describe the poverty levels.
+
