@@ -1,0 +1,38 @@
+---
+title: "Week 2 Excel PivotTable + Chart"
+author: "Pratiti Navam"
+format: html
+editor: visual
+---
+
+## Air Quality Pivot Tables, Wednesday 09/04/24
+
+### Histogram
+
+I am using the air quality data set which is shows the ozone ppm distribution based on temperature, month and day. Th data was obtained from the New York State Department of Conservation and the National Weather Service. The temperature was taking as the maximum daily temperature at LaGuardia airport. The mean ozone is measured in parts per billion from 13:00 to 15:00 at Roosevelt Island.
+
+I used excel to clean the data through filtration by removing the NA values. I then did exploration analysis.
+
+### Ozone Histogram
+
+![](hist_ozone_navam.png)
+
+### Ozone vs. Temp Scatterplot
+
+![](scat_oz_temp_navam.png)
+
+### My First Pivot Table
+
+![](avg_ozone_navam.png)
+
+This table shows the difference in averages of ozone in May versus September. The trend shows that the average seems to be higher at the start of the month and decreases gradually. In September there is a general trend of higher ozone levels per day compared to May. This trend may reveal something new about the ozone levels and air quality.
+
+## Context of Dataset, Friday 09/06/24
+
+U.S. Bureau of Labor Statistics
+
+The Consumer Expenditure Surveys (CE) are national studies by the U.S. Bureau of Labor Statistics (BLS) that examine how people in the U.S. spend their money. The CE includes two types of surveys: the Interview Survey and the Diary Survey. The Interview Survey gathers information about significant or ongoing expenses that people can remember over a period of 3 months or more, including large purchases like homes and cars or regular payments like rent and utilities.
+
+CE data are valuable for both government and private organizations that focus on specific population groups, including the elderly, low-income families, urban residents, and individuals receiving Supplemental Nutrition Assistance Program (SNAP) benefits. Economic policymakers use this data to evaluate how policy changes affect living standards among various socioeconomic groups, while econometricians leverage it to build models for predicting economic outcomes.
+
+I plan to break up all the parts of the data to the main sections to compare how much consumers spend on each category in life.
