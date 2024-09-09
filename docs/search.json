@@ -30,11 +30,21 @@
     ]
   },
   {
+    "objectID": "Hayk.html#week-2",
+    "href": "Hayk.html#week-2",
+    "title": "1  Hayk",
+    "section": "1.2 Week 2",
+    "text": "1.2 Week 2",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
+    ]
+  },
+  {
     "objectID": "Hayk.html#wednesday-1",
     "href": "Hayk.html#wednesday-1",
     "title": "1  Hayk",
-    "section": "1.2 Wednesday",
-    "text": "1.2 Wednesday",
+    "section": "1.3 Wednesday",
+    "text": "1.3 Wednesday",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
     ]
@@ -43,8 +53,8 @@
     "objectID": "Hayk.html#histogram",
     "href": "Hayk.html#histogram",
     "title": "1  Hayk",
-    "section": "1.3 Histogram",
-    "text": "1.3 Histogram\nI am using the airquality dataset, which is …\nI use excel to clean the data, remove all the rows which have NA values, and I did an exploration analysis\n\n1.3.1 Ozone Histogram\n\n\n\n1.3.2 Ozone vs Temp\n ### which day out of all the months had the most solar R",
+    "section": "1.4 Histogram",
+    "text": "1.4 Histogram\nI am using the airquality dataset, which is …\nI use excel to clean the data, remove all the rows which have NA values, and I did an exploration analysis\n\n1.4.1 Ozone Histogram\n\n\n\n1.4.2 Ozone vs Temp\n ### which day out of all the months had the most solar R",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
     ]
@@ -53,8 +63,8 @@
     "objectID": "Hayk.html#friday-1",
     "href": "Hayk.html#friday-1",
     "title": "1  Hayk",
-    "section": "1.4 friday",
-    "text": "1.4 friday\nToday I am learning about pivot charts which are extended from pivot tables. To get to my insert chart I selected all of my pivot table and near the insert tab there was an option for a pivot chart.\n\nThis graph shows how for each day for each month, the ratio of each value. For example, for each month you can start to see the temperature changes between each day within each month. You can see which days have more average Ozone, and which days have an increase of solar Radiation. We can see how when there is an increase in temperature, there is less solar radiation which I find interesting. there was a day on the 8th month where there seemed to be no solar radiation and only an increased average temp and increased ozone.\n\nThis pivot table and pivot chart for my data is representing how much of the market is taken up by which type of vehicles. We can see visually that generally, there is a trend that the shorter the distance for the commercial vehicles, the more of those types of vehicles are bought. My data for this week is the vehicle stock. The X line represents how much vehicles are sold, while the Y line lists the amount of miles expected for that commercial vehicle type.",
+    "section": "1.5 friday",
+    "text": "1.5 friday\nToday I am learning about pivot charts which are extended from pivot tables. To get to my insert chart I selected all of my pivot table and near the insert tab there was an option for a pivot chart.\n\nThis graph shows how for each day for each month, the ratio of each value. For example, for each month you can start to see the temperature changes between each day within each month. You can see which days have more average Ozone, and which days have an increase of solar Radiation. We can see how when there is an increase in temperature, there is less solar radiation which I find interesting. there was a day on the 8th month where there seemed to be no solar radiation and only an increased average temp and increased ozone.\n\nThis pivot table and pivot chart for my data is representing how much of the market is taken up by which type of vehicles. We can see visually that generally, there is a trend that the shorter the distance for the commercial vehicles, the more of those types of vehicles are bought. My data for this week is the vehicle stock. The X line represents how much vehicles are sold, while the Y line lists the amount of miles expected for that commercial vehicle type.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
     ]

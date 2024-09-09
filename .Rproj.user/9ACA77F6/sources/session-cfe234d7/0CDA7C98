@@ -1,26 +1,26 @@
 {
-    "id": "47B527ED",
-    "path": "~/Group3/Hayk.qmd",
-    "project_path": "Hayk.qmd",
+    "id": "0CDA7C98",
+    "path": "~/Group3/index.qmd",
+    "project_path": "index.qmd",
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1725767628783.0,
+    "created": 1725902338437.0,
     "source_on_save": false,
-    "relative_order": 4,
+    "relative_order": 10,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "70,0",
-        "scrollLine": "68"
+        "cursorPosition": "0,23",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725902395,
+    "lastKnownWriteTime": 1725249307,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725902395587,
+    "last_content_update": 1725249307,
     "read_only": false,
     "read_only_alternatives": []
 }
