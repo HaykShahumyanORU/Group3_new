@@ -34,37 +34,17 @@
     "href": "Hayk.html#week-2",
     "title": "1  Hayk",
     "section": "1.2 Week 2",
-    "text": "1.2 Week 2",
+    "text": "1.2 Week 2\n\n1.2.1 Wednesday\n\n1.2.1.1 Histogram\nI am using the airquality dataset, which is …\nI use excel to clean the data, remove all the rows which have NA values, and I did an exploration analysis\n\n\n1.2.1.2 Ozone Histogram\n\n\n\n1.2.1.3 Ozone vs Temp\n #### which day out of all the months had the most solar R\n\n\n\n\n1.2.2 friday\nToday I am learning about pivot charts which are extended from pivot tables. To get to my insert chart I selected all of my pivot table and near the insert tab there was an option for a pivot chart.\n\nThis graph shows how for each day for each month, the ratio of each value. For example, for each month you can start to see the temperature changes between each day within each month. You can see which days have more average Ozone, and which days have an increase of solar Radiation. We can see how when there is an increase in temperature, there is less solar radiation which I find interesting. there was a day on the 8th month where there seemed to be no solar radiation and only an increased average temp and increased ozone.\n\nThis pivot table and pivot chart for my data is representing how much of the market is taken up by which type of vehicles. We can see visually that generally, there is a trend that the shorter the distance for the commercial vehicles, the more of those types of vehicles are bought. My data for this week is the vehicle stock. The X line represents how much vehicles are sold, while the Y line lists the amount of miles expected for that commercial vehicle type.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
     ]
   },
   {
-    "objectID": "Hayk.html#wednesday-1",
-    "href": "Hayk.html#wednesday-1",
+    "objectID": "Hayk.html#week-3",
+    "href": "Hayk.html#week-3",
     "title": "1  Hayk",
-    "section": "1.3 Wednesday",
-    "text": "1.3 Wednesday",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
-    ]
-  },
-  {
-    "objectID": "Hayk.html#histogram",
-    "href": "Hayk.html#histogram",
-    "title": "1  Hayk",
-    "section": "1.4 Histogram",
-    "text": "1.4 Histogram\nI am using the airquality dataset, which is …\nI use excel to clean the data, remove all the rows which have NA values, and I did an exploration analysis\n\n1.4.1 Ozone Histogram\n\n\n\n1.4.2 Ozone vs Temp\n ### which day out of all the months had the most solar R",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
-    ]
-  },
-  {
-    "objectID": "Hayk.html#friday-1",
-    "href": "Hayk.html#friday-1",
-    "title": "1  Hayk",
-    "section": "1.5 friday",
-    "text": "1.5 friday\nToday I am learning about pivot charts which are extended from pivot tables. To get to my insert chart I selected all of my pivot table and near the insert tab there was an option for a pivot chart.\n\nThis graph shows how for each day for each month, the ratio of each value. For example, for each month you can start to see the temperature changes between each day within each month. You can see which days have more average Ozone, and which days have an increase of solar Radiation. We can see how when there is an increase in temperature, there is less solar radiation which I find interesting. there was a day on the 8th month where there seemed to be no solar radiation and only an increased average temp and increased ozone.\n\nThis pivot table and pivot chart for my data is representing how much of the market is taken up by which type of vehicles. We can see visually that generally, there is a trend that the shorter the distance for the commercial vehicles, the more of those types of vehicles are bought. My data for this week is the vehicle stock. The X line represents how much vehicles are sold, while the Y line lists the amount of miles expected for that commercial vehicle type.",
+    "section": "1.3 Week 3",
+    "text": "1.3 Week 3\n\n1.3.1 Wednesday\nA data frame with 20 observations on 3 variables.\n[, 1] extra numeric increase in hours of sleep [, 2] group factor drug given [, 3] ID factor patient ID\nUsing the sleep dataset to create my first dashboard\nhttps://public.tableau.com/app/profile/hayk.shahumyan/viz/Wednesdayweek3/Dashboard1\n\n\n1.3.2 Friday\nI plan to work on fuel costs of vehicles of projected till 2040\nFormat\nThere are 3 variables we focus on: cost of electricity cost of diesel cost of hydrogen from now till 2050\nDetails\nWe can see trends of downward prices of electricity and hydrogen, while diesel is mostly stable in price\nhttps://public.tableau.com/app/profile/hayk.shahumyan/viz/Week3Friday-Saturday/Dashboard1",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
     ]
@@ -84,7 +64,7 @@
     "href": "Pratiti.html#week-1",
     "title": "2  Pratiti",
     "section": "",
-    "text": "2.1.1 Wednesday\n\n\n2.1.2 Basic Functions\nI can now use sum, average, and more functions to select a whole row and make the process more efficient for large datasets.\n\n\n2.1.3 Basic Visualizations\nThrough using the insert tab, I learned how to choose to represent data with a scatterplot, line plot, bar chart, and more. To customize and format the histogram is easily done in Excel. Each axis can be labeled for the person viewing to understand.\n\n\n2.1.4 Scatter Plot\n\nFrom the Dataset, we see a trend that as the age of the tree increases, the circumference also increases. This is consistent for different types of trees and helps us see into history of how long a tree survived. Another method is also to count the rings once the tree is cut down. However, using the circumference gives a qualitative measurement of when the tree can still be alive and aged.\n\n\n2.1.5 Friday\nThe US Bureau of Labor and Statistics offers many data sets to do with the work force in America. This data is found from civilian unemployment rates over the past 10 years including people of different ethnicity.\n\nThe visualization shows there is a peak in unemployment rate in the year 2020-2021 when Covid-19 affected everyday lives of civilians. This graph represents the unemployment dramatic decrease during the pandemic, but also stabilization in 2022.",
+    "text": "2.1.1 Wednesday\n\n2.1.1.1 Basic Functions\nI can now use sum, average, and more functions to select a whole row and make the process more efficient for large datasets.\n\n\n2.1.1.2 Basic Visualizations\nThrough using the insert tab, I learned how to choose to represent data with a scatterplot, line plot, bar chart, and more. To customize and format the histogram is easily done in Excel. Each axis can be labeled for the person viewing to understand.\n\n\n\n2.1.2 Scatter Plot\n\nFrom the Dataset, we see a trend that as the age of the tree increases, the circumference also increases. This is consistent for different types of trees and helps us see into history of how long a tree survived. Another method is also to count the rings once the tree is cut down. However, using the circumference gives a qualitative measurement of when the tree can still be alive and aged.\n\n2.1.2.1 Friday\nThe US Bureau of Labor and Statistics offers many data sets to do with the work force in America. This data is found from civilian unemployment rates over the past 10 years including people of different ethnicity.\n\nThe visualization shows there is a peak in unemployment rate in the year 2020-2021 when Covid-19 affected everyday lives of civilians. This graph represents the unemployment dramatic decrease during the pandemic, but also stabilization in 2022.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
     ]
@@ -94,27 +74,17 @@
     "href": "Pratiti.html#week-2",
     "title": "2  Pratiti",
     "section": "2.2 Week 2",
-    "text": "2.2 Week 2",
+    "text": "2.2 Week 2\n\n2.2.1 Wednesday\n\n2.2.1.1 Histogram\nI am using the air quality data set which is shows the ozone ppm distribution based on temperature, month and day. Th data was obtained from the New York State Department of Conservation and the National Weather Service. The temperature was taking as the maximum daily temperature at LaGuardia airport. The mean ozone is measured in parts per billion from 13:00 to 15:00 at Roosevelt Island.\nI used excel to clean the data through filtration by removing the NA values. I then did exploration analysis.\n\n\n2.2.1.2 Ozone Histogram\n\n\n\n2.2.1.3 Ozone vs. Temp Scatterplot\n\n\n\n2.2.1.4 My First Pivot Table\n\nThis table shows the difference in averages of ozone in May versus September. The trend shows that the average seems to be higher at the start of the month and decreases gradually. In September there is a general trend of higher ozone levels per day compared to May. This trend may reveal something new about the ozone levels and air quality.\n\n\n\n2.2.2 Friday\nU.S. Bureau of Labor Statistics\nThe Consumer Expenditure Surveys (CE) are national studies by the U.S. Bureau of Labor Statistics (BLS) that examine how people in the U.S. spend their money. The CE includes two types of surveys: the Interview Survey and the Diary Survey. The Interview Survey gathers information about significant or ongoing expenses that people can remember over a period of 3 months or more, including large purchases like homes and cars or regular payments like rent and utilities.\nCE data are valuable for both government and private organizations that focus on specific population groups, including the elderly, low-income families, urban residents, and individuals receiving Supplemental Nutrition Assistance Program (SNAP) benefits. Economic policymakers use this data to evaluate how policy changes affect living standards among various socioeconomic groups, while econometricians leverage it to build models for predicting economic outcomes.\nI plan to break up all the parts of the data to the main sections to compare how much consumers spend on each category in life.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
     ]
   },
   {
-    "objectID": "Pratiti.html#air-quality-pivot-tables-wednesday-090424",
-    "href": "Pratiti.html#air-quality-pivot-tables-wednesday-090424",
+    "objectID": "Pratiti.html#week-3",
+    "href": "Pratiti.html#week-3",
     "title": "2  Pratiti",
-    "section": "2.3 Air Quality Pivot Tables, Wednesday 09/04/24",
-    "text": "2.3 Air Quality Pivot Tables, Wednesday 09/04/24\n\n2.3.1 Histogram\nI am using the air quality data set which is shows the ozone ppm distribution based on temperature, month and day. Th data was obtained from the New York State Department of Conservation and the National Weather Service. The temperature was taking as the maximum daily temperature at LaGuardia airport. The mean ozone is measured in parts per billion from 13:00 to 15:00 at Roosevelt Island.\nI used excel to clean the data through filtration by removing the NA values. I then did exploration analysis.\n\n\n2.3.2 Ozone Histogram\n\n\n\n2.3.3 Ozone vs. Temp Scatterplot\n\n\n\n2.3.4 My First Pivot Table\n\nThis table shows the difference in averages of ozone in May versus September. The trend shows that the average seems to be higher at the start of the month and decreases gradually. In September there is a general trend of higher ozone levels per day compared to May. This trend may reveal something new about the ozone levels and air quality.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
-    ]
-  },
-  {
-    "objectID": "Pratiti.html#context-of-dataset-friday-090624",
-    "href": "Pratiti.html#context-of-dataset-friday-090624",
-    "title": "2  Pratiti",
-    "section": "2.4 Context of Dataset, Friday 09/06/24",
-    "text": "2.4 Context of Dataset, Friday 09/06/24\nU.S. Bureau of Labor Statistics\nThe Consumer Expenditure Surveys (CE) are national studies by the U.S. Bureau of Labor Statistics (BLS) that examine how people in the U.S. spend their money. The CE includes two types of surveys: the Interview Survey and the Diary Survey. The Interview Survey gathers information about significant or ongoing expenses that people can remember over a period of 3 months or more, including large purchases like homes and cars or regular payments like rent and utilities.\nCE data are valuable for both government and private organizations that focus on specific population groups, including the elderly, low-income families, urban residents, and individuals receiving Supplemental Nutrition Assistance Program (SNAP) benefits. Economic policymakers use this data to evaluate how policy changes affect living standards among various socioeconomic groups, while econometricians leverage it to build models for predicting economic outcomes.\nI plan to break up all the parts of the data to the main sections to compare how much consumers spend on each category in life.",
+    "section": "2.3 Week 3",
+    "text": "2.3 Week 3\n\n2.3.1 Wednesday\n\n2.3.1.1 Orchard Sprays\nAn experiment was conducted to evaluate the effectiveness of various orchard spray components in repelling honeybees, using a Latin square design. In this experiment, dry comb cells were filled with specific amounts of lime sulfur emulsion mixed in sucrose solution. Seven concentrations of lime sulfur were tested, ranging from 1/100 to 1/1,562,500, with each concentration decreasing by factors of 1/5, along with a control solution containing no lime sulfur. A had the highest level of lime sulpher while H had no lime sulphur. To assess the bees’ responses, 100 bees were released into a chamber for two hours, and the decrease in solution volume in each cell was measured to determine the repellency of the different concentrations.\nDashboard on Tableau\n\n\n\n2.3.2 Friday\n\nPratiti will work on employment and wages in different states collectively -\n\nThe Quarterly Census of Employment and Wages (QCEW) provides detailed employment and wage data across various industries, states, and the entire U.S. For the first quarter of 2024, the dataset encompasses private sector employment and wages across all industries and establishment sizes. This comprehensive dataset, sourced from the Bureau of Labor Statistics, allows for an in-depth analysis of employment trends and wage patterns nationwide. The QCEW data is instrumental in understanding the economic landscape, providing valuable insights into employment distribution and wage structures across different sectors and regions.\nDashboard on Tableau",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
     ]
@@ -124,7 +94,7 @@
     "href": "Savannah.html",
     "title": "3  Savannah",
     "section": "",
-    "text": "3.1 Week 1\nexcel\n(note that I was not able to upload the photos to here) ## Wednesday\nACCESS THE WEB VERSION OF EXCEL THROUGH ONEDRIVE\n-cell is identified by a column letter and row number and holds a piece of data.\n-column is a vertical set of cells, identified by a letter.\n-row is a horizontal set of cells, identified by a number.\n=SUM() =AVERAGE() =MAX() =MIN()\ndouble click corner of box around a cell to make the formula go apply to the whole column\nuse control to select multiple specific cells/columns\nshift right control down to select\nuse &lt;&gt; to input a link in Quarto document\nuse to input a screenshot in a Quarto document MUST BE IN THE SAME FOLDER\nSCATTER PLOT EXAMPLE",
+    "text": "3.1 Week 1\nexcel\n(note that I was not able to upload the photos to here) ### Wednesday\nACCESS THE WEB VERSION OF EXCEL THROUGH ONEDRIVE\n-cell is identified by a column letter and row number and holds a piece of data.\n-column is a vertical set of cells, identified by a letter.\n-row is a horizontal set of cells, identified by a number.\n=SUM() =AVERAGE() =MAX() =MIN()\ndouble click corner of box around a cell to make the formula go apply to the whole column\nuse control to select multiple specific cells/columns\nshift right control down to select\nuse &lt;&gt; to input a link in Quarto document\nuse to input a screenshot in a Quarto document MUST BE IN THE SAME FOLDER\nSCATTER PLOT EXAMPLE",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
     ]
@@ -144,27 +114,7 @@
     "href": "Savannah.html#week-2",
     "title": "3  Savannah",
     "section": "3.2 week 2",
-    "text": "3.2 week 2",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
-    ]
-  },
-  {
-    "objectID": "Savannah.html#excel-pivot-table-and-chart",
-    "href": "Savannah.html#excel-pivot-table-and-chart",
-    "title": "3  Savannah",
-    "section": "3.3 EXCEL: PIVOT TABLE AND CHART",
-    "text": "3.3 EXCEL: PIVOT TABLE AND CHART\n\n3.3.1 Documentation\nI am using the airquality data set which lists the daily numeric values of Ozone, Solar Radiation, Wind, and Temperature from the months of May to September in 1973 from the state of New York. The Ozone data was measured from Roosevelt Island, the Solar Radiation data was measured from Central Park, and the both the Wind and Temperature data was measured from the LaGuardia airport. This data was obtained from the New York State Department of Conservation, which provided the Ozone data, as well as the National Weather Service, which provided the meteorological data including the temperature, wind, and solar radiation values.\nI used excel to clean the data by removing all the rows with NA values, and performed exploration analysis with histograms and a pivot table and chart.\n\n\n3.3.2 Ozone Histogram\nIn-class example\n\n\n\n3.3.3 Ozonve vs Temp Scatter Plot\nIn-class example\n\n\n\n3.3.4 My first Pivot Table and Chart\n\nFrom my pivot table, I was able to take all the numerical data from the airquality data set and use a stacked line chart to compare the values of Ozone, Solar Radiation, Wind, and Temperature per day in the month of May. The line chart is colored by topic to make it easy to visually compare each topic as it changes per day. From this visualization, I was able to observe that the Wind and Temperature values remained relatively even throughout the month, while the Solar Radiation values became occasionally unstable, and the Ozone values changed drastically throughout the month.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
-    ]
-  },
-  {
-    "objectID": "Savannah.html#individual-project-documentation",
-    "href": "Savannah.html#individual-project-documentation",
-    "title": "3  Savannah",
-    "section": "3.4 INDIVIDUAL PROJECT DOCUMENTATION",
-    "text": "3.4 INDIVIDUAL PROJECT DOCUMENTATION\nMy data set is Rates of COVID-19 Cases or Deaths by Age Group and Vaccination Status from the Centers for Disease Control and Prevention website.\n\n3.4.1 Description of data set\nThis data set was posted on October 21, 2022 and was revised on February 22, 2023. The data reflect cases among people within various age groups with a positive specimen collection date through September 24, 2022, and deaths among people within those age groups with a positive specimen collection date through September 3, 2022.\nThe data was provided by the CDC COVID-19 Response, Epidemiology Task Force.\nThis data set has 1,591 rows and 16 columns.\n\n\n3.4.2 Purpose of data set\nThis information can be used by the CDC and pharmaceutical companies to see how affective the vaccine is in preventing Covid-19 cases, as well as to see if the vaccine helps prevent death once the virus is contracted.\nThis information can also be used to see if the vaccine is more correlated to preventing deaths or cases within specific age groups.\nThis information can be used by hospitals to predict the necessary number of beds and ventilators needed for patients.\nThis information can be used by insurance companies to determine how much money should be put aside to cover health/life insurance costs.\n\n\n3.4.3 Variables in data set and data type\nOUTCOME: case or death (text)\nMONTH: corresponding month to the MMWR week- MMM YYYY (text)\nMMWR week: the morbidity and mortality weekly report- YYYYWW (text)\nAGE GROUP: 0-5 (4 yrs), 5-11, 12-17, 18-29, 30-49, 50-64, 65-70, 80+ (text)\nVACCINE PRODUCT: Janssen, Moderna, Pfizer, all (text)\nVACCINATED WITH OUTCOME: weekly count of vaccinated individuals that correspond with an outcome (number)\nFULLY VACCINATED POPULATION: cumulative weekly count of the population vaccinated (number)\nUNVACCINATED WITH OUTCOME: weekly count of unvaccinated individuals that correspond with an outcome (number)\nUNVACCINATED POPULATION: cumulative weekly count of the population un-vaccinated (number)\nCRUDE VAX IR: incident rate for vaccinated population per 100,000 (number)\nCRUDE UNVAX IR: incident rate for un-vaccinated population per 100,000 (number)\nCRUDE IRR: incident rate ratio (un-vaccinated : vaccinated) (number)\nAGE ADJUSTED VAX IR: incident rate by age for vaccinated population per 100,000 (number)\nAGE ADJUSTED UNVAX IR: incident rate by age for un-vaccinated population per 100,000 (number)\nAGE ADJUSTED CRUDE IRR: incident rate ratio by age (un-vaccinated : vaccinated) (number)\nCONTINUITY CORRECTION: indicates whether the data was adjusted with the assumption that at least 5 percent of the population in the jurisdiction is un-vaccinated (number)\n\n\n3.4.4 Link to data set\nhttps://data.cdc.gov/Public-Health-Surveillance/Rates-of-COVID-19-Cases-or-Deaths-by-Age-Group-and/3rge-nu2a/about_data",
+    "text": "3.2 week 2\n\n3.2.0.1 EXCEL: PIVOT TABLE AND CHART\n\n\n3.2.0.2 Documentation\nI am using the airquality data set which lists the daily numeric values of Ozone, Solar Radiation, Wind, and Temperature from the months of May to September in 1973 from the state of New York. The Ozone data was measured from Roosevelt Island, the Solar Radiation data was measured from Central Park, and the both the Wind and Temperature data was measured from the LaGuardia airport. This data was obtained from the New York State Department of Conservation, which provided the Ozone data, as well as the National Weather Service, which provided the meteorological data including the temperature, wind, and solar radiation values.\nI used excel to clean the data by removing all the rows with NA values, and performed exploration analysis with histograms and a pivot table and chart.\n\n\n3.2.0.3 Ozone Histogram\nIn-class example\n\n\n\n3.2.0.4 Ozonve vs Temp Scatter Plot\nIn-class example\n\n\n\n3.2.0.5 My first Pivot Table and Chart\n\nFrom my pivot table, I was able to take all the numerical data from the airquality data set and use a stacked line chart to compare the values of Ozone, Solar Radiation, Wind, and Temperature per day in the month of May. The line chart is colored by topic to make it easy to visually compare each topic as it changes per day. From this visualization, I was able to observe that the Wind and Temperature values remained relatively even throughout the month, while the Solar Radiation values became occasionally unstable, and the Ozone values changed drastically throughout the month.\n\n\n3.2.0.6 INDIVIDUAL PROJECT DOCUMENTATION\nMy data set is Rates of COVID-19 Cases or Deaths by Age Group and Vaccination Status from the Centers for Disease Control and Prevention website.\n\n\n3.2.0.7 Description of data set\nThis data set was posted on October 21, 2022 and was revised on February 22, 2023. The data reflect cases among people within various age groups with a positive specimen collection date through September 24, 2022, and deaths among people within those age groups with a positive specimen collection date through September 3, 2022.\nThe data was provided by the CDC COVID-19 Response, Epidemiology Task Force.\nThis data set has 1,591 rows and 16 columns.\n\n\n3.2.0.8 Purpose of data set\nThis information can be used by the CDC and pharmaceutical companies to see how affective the vaccine is in preventing Covid-19 cases, as well as to see if the vaccine helps prevent death once the virus is contracted.\nThis information can also be used to see if the vaccine is more correlated to preventing deaths or cases within specific age groups.\nThis information can be used by hospitals to predict the necessary number of beds and ventilators needed for patients.\nThis information can be used by insurance companies to determine how much money should be put aside to cover health/life insurance costs.\n\n\n3.2.0.9 Variables in data set and data type\nOUTCOME: case or death (text)\nMONTH: corresponding month to the MMWR week- MMM YYYY (text)\nMMWR week: the morbidity and mortality weekly report- YYYYWW (text)\nAGE GROUP: 0-5 (4 yrs), 5-11, 12-17, 18-29, 30-49, 50-64, 65-70, 80+ (text)\nVACCINE PRODUCT: Janssen, Moderna, Pfizer, all (text)\nVACCINATED WITH OUTCOME: weekly count of vaccinated individuals that correspond with an outcome (number)\nFULLY VACCINATED POPULATION: cumulative weekly count of the population vaccinated (number)\nUNVACCINATED WITH OUTCOME: weekly count of unvaccinated individuals that correspond with an outcome (number)\nUNVACCINATED POPULATION: cumulative weekly count of the population un-vaccinated (number)\nCRUDE VAX IR: incident rate for vaccinated population per 100,000 (number)\nCRUDE UNVAX IR: incident rate for un-vaccinated population per 100,000 (number)\nCRUDE IRR: incident rate ratio (un-vaccinated : vaccinated) (number)\nAGE ADJUSTED VAX IR: incident rate by age for vaccinated population per 100,000 (number)\nAGE ADJUSTED UNVAX IR: incident rate by age for un-vaccinated population per 100,000 (number)\nAGE ADJUSTED CRUDE IRR: incident rate ratio by age (un-vaccinated : vaccinated) (number)\nCONTINUITY CORRECTION: indicates whether the data was adjusted with the assumption that at least 5 percent of the population in the jurisdiction is un-vaccinated (number)\n\n\n3.2.0.10 Link to data set\nhttps://data.cdc.gov/Public-Health-Surveillance/Rates-of-COVID-19-Cases-or-Deaths-by-Age-Group-and/3rge-nu2a/about_data",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
     ]
@@ -180,71 +130,11 @@
     ]
   },
   {
-    "objectID": "Shae.html#monday-excel-tutorial-airqualitu-dataset",
-    "href": "Shae.html#monday-excel-tutorial-airqualitu-dataset",
+    "objectID": "Shae.html#week-1",
+    "href": "Shae.html#week-1",
     "title": "4  Shae",
-    "section": "4.2 Monday, Excel Tutorial airqualitu dataset",
-    "text": "4.2 Monday, Excel Tutorial airqualitu dataset\nTutorial on excel function, sum,average. Go here &lt;\nCell is…… column is… row is….\n##Basic Functions\nsum =sum(cell:cell)\nScatter Plot Insert graph by the insert tab adding a screenshot into a quarto",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
-    ]
-  },
-  {
-    "objectID": "Shae.html#our-own-document",
-    "href": "Shae.html#our-own-document",
-    "title": "4  Shae",
-    "section": "4.3 Our own document",
-    "text": "4.3 Our own document\nmtcars",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
-    ]
-  },
-  {
-    "objectID": "Shae.html#using-the-xcensus-data",
-    "href": "Shae.html#using-the-xcensus-data",
-    "title": "4  Shae",
-    "section": "4.4 Using the x,Census Data",
-    "text": "4.4 Using the x,Census Data",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
-    ]
-  },
-  {
-    "objectID": "Shae.html#description",
-    "href": "Shae.html#description",
-    "title": "4  Shae",
-    "section": "4.5 Description",
-    "text": "4.5 Description\nIt is a census of the poverty levels in California in the year of 2018",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
-    ]
-  },
-  {
-    "objectID": "Shae.html#format",
-    "href": "Shae.html#format",
-    "title": "4  Shae",
-    "section": "4.6 Format",
-    "text": "4.6 Format\nThis data has 63 rows and 4 columns. [1] Label -&gt; categorical [2]population estimate -&gt; numerical [3]below poverty population estimate -&gt; numerical [4]percent below poverty -&gt; percentage\n#3 details Label - categorizing of population by different variables i.e age, ethnicity, race and sex population estimate - calculation of total population by categories under label below poverty population estimate- calculation of total population below poverty levels below poverty by categories under label percentage - calculation of percent of total population divided by total population below poverty\nSource https://data.census.gov/table/ACSST1Y2018.S1701?q=poverty%20in%20california%20in%202018",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
-    ]
-  },
-  {
-    "objectID": "Shae.html#cleaning",
-    "href": "Shae.html#cleaning",
-    "title": "4  Shae",
-    "section": "4.7 Cleaning",
-    "text": "4.7 Cleaning\nI removed the ratios as it only had the total popualtion seperated by age which was just a reiteration of the first few rows\nthere was an option of including the marginal error and I chose against that. I did not believe it was vital in explaining my data.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
-    ]
-  },
-  {
-    "objectID": "Shae.html#explanation",
-    "href": "Shae.html#explanation",
-    "title": "4  Shae",
-    "section": "4.8 Explanation",
-    "text": "4.8 Explanation\nThis data is has 71 rows, which divides my data into groups that are in the category of age, sex, race,highest level of education,employment status, work experience,and UNRELATED INDIVIDUALS FOR WHOM POVERTY STATUS IS DETERMINED\nThis data is has 4 columns that are filled with label and three estimate, each estimate is separated into the total in the group identified in the row and the amount that is below poverty as well as the percentage of the amount below poverty compared to the total in the category highlighted in the rows.\n  The above are the visualizations I chose to do to explain my data. The first is the distribution of poverty levels by gender to get a better understanding of the poverty levels in each gender before we break it up even further\nThe second is by age and I chose to include the overall population of each age group to understand the poverty levels against the overall population\nI also then made a pivot table chart with the education levels which makes the chart interchangeable and I can single out each education levels poverty rate\nThe 4th is among ethnicity if I continue using this data set the poverty among ethnicity is very important to understand and I also used a pie chart because it was the easiest to see which ethnicity has the most and compare them against one another.\nTotal homeless population against the total population just helps understand the overall populations of both before the deep dive\nLastly i just did the poverty levels against age without the total population because I believe age is the best way to describe the poverty levels.",
+    "section": "",
+    "text": "4.1.1 Monday\nTutorial on excel function, sum,average. Go here &lt;\nCell is…… column is… row is….\n\n4.1.1.1 Basic Functions\nsum =sum(cell:cell)\nScatter Plot Insert graph by the insert tab adding a screenshot into a quarto\n\n\n\n4.1.1.2 Our own document\nmtcars\n\n\n4.1.1.3 Using the x,Census Data\n\n\n4.1.1.4 Description\nIt is a census of the poverty levels in California in the year of 2018\n\n\n4.1.1.5 Format\nThis data has 63 rows and 4 columns. [1] Label -&gt; categorical [2]population estimate -&gt; numerical [3]below poverty population estimate -&gt; numerical [4]percent below poverty -&gt; percentage\n#3 details Label - categorizing of population by different variables i.e age, ethnicity, race and sex population estimate - calculation of total population by categories under label below poverty population estimate- calculation of total population below poverty levels below poverty by categories under label percentage - calculation of percent of total population divided by total population below poverty\nSource https://data.census.gov/table/ACSST1Y2018.S1701?q=poverty%20in%20california%20in%202018\n\n\n4.1.1.6 Cleaning\nI removed the ratios as it only had the total popualtion seperated by age which was just a reiteration of the first few rows\nthere was an option of including the marginal error and I chose against that. I did not believe it was vital in explaining my data.\n\n\n4.1.1.7 Explanation\nThis data is has 71 rows, which divides my data into groups that are in the category of age, sex, race,highest level of education,employment status, work experience,and UNRELATED INDIVIDUALS FOR WHOM POVERTY STATUS IS DETERMINED\nThis data is has 4 columns that are filled with label and three estimate, each estimate is separated into the total in the group identified in the row and the amount that is below poverty as well as the percentage of the amount below poverty compared to the total in the category highlighted in the rows.\n  The above are the visualizations I chose to do to explain my data. The first is the distribution of poverty levels by gender to get a better understanding of the poverty levels in each gender before we break it up even further\nThe second is by age and I chose to include the overall population of each age group to understand the poverty levels against the overall population\nI also then made a pivot table chart with the education levels which makes the chart interchangeable and I can single out each education levels poverty rate\nThe 4th is among ethnicity if I continue using this data set the poverty among ethnicity is very important to understand and I also used a pie chart because it was the easiest to see which ethnicity has the most and compare them against one another.\nTotal homeless population against the total population just helps understand the overall populations of both before the deep dive\nLastly i just did the poverty levels against age without the total population because I believe age is the best way to describe the poverty levels.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
     ]
@@ -253,38 +143,18 @@
     "objectID": "Shae.html#week-2",
     "href": "Shae.html#week-2",
     "title": "4  Shae",
-    "section": "4.9 Week 2",
-    "text": "4.9 Week 2",
+    "section": "4.2 Week 2",
+    "text": "4.2 Week 2\n\n4.2.0.1 Histograms\nI am using the air quality dataset, which is a measurement in New york from the months May to September 1973\n\n\n4.2.0.2 Format\nthis data has 153 observation and 6 variables but after cleaning it has 112 observations and six variables\n\n\n4.2.0.3 Source\nI got this data from d2l which was obtained from the New York State Department Of conservation\nI use excel to clean the data, remove all the NA which I used the filter tab to achieve.\n  This explains the average of ozone,solar,wind and temp pver the months which gives us a good idea of of which month was the highest and which had the stongest pull through the months.\n\nI chose maximum winds by the months and day to see their trend lind and which month going into specifically what day had the highest and lowest.\n I also did the average ozone by temp whichb gives an idea of what was happening in the ozone by different temps",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
     ]
   },
   {
-    "objectID": "Shae.html#histograms",
-    "href": "Shae.html#histograms",
+    "objectID": "Shae.html#week-3",
+    "href": "Shae.html#week-3",
     "title": "4  Shae",
-    "section": "4.10 Histograms",
-    "text": "4.10 Histograms\nI am using the air quality dataset, which is a measurement in New york from the months May to September 1973",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
-    ]
-  },
-  {
-    "objectID": "Shae.html#format-1",
-    "href": "Shae.html#format-1",
-    "title": "4  Shae",
-    "section": "4.11 Format",
-    "text": "4.11 Format\nthis data has 153 observation and 6 variables but after cleaning it has 112 observations and six variables",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
-    ]
-  },
-  {
-    "objectID": "Shae.html#source",
-    "href": "Shae.html#source",
-    "title": "4  Shae",
-    "section": "4.12 Source",
-    "text": "4.12 Source\nI got this data from d2l which was obtained from the New York State Department Of conservation\nI use excel to clean the data, remove all the NA which I used the filter tab to achieve.\n  This explains the average of ozone,solar,wind and temp pver the months which gives us a good idea of of which month was the highest and which had the stongest pull through the months.\n\nI chose maximum winds by the months and day to see their trend lind and which month going into specifically what day had the highest and lowest.\n I also did the average ozone by temp whichb gives an idea of what was happening in the ozone by different temps",
+    "section": "4.3 Week 3",
+    "text": "4.3 Week 3\n\n4.3.1 Wednesday\nPuromycin was my data set which is the study of the reaction verus the substrate concentration in an enzymatic reaction involving untreated cells or cells treated with Puromycin.The experiment was conducted once with the enzyme treated with Puromycin, and once with the enzyme untreated.\nThis dataset has 23 rows and 3 columns\nconc -&gt; a numeric vector of substrate concentrations (parts per million-ppm)\nrate/velocity -&gt; a numeric vector of instantaneous reaction rates, which was calculated from conc (counts/min/min)\nstate -&gt; a factor with levels treated untreated\nhttps://public.tableau.com/authoring/Week_3_Tableu_Mukurazhizha/Dashboard1#1\n\n\n4.3.2 Friday\n-Shae plans to work on a dashboard based on poverty data for specifically the state of oklahoma between Friday and Saturday-\n\n4.3.2.1 Using the x,Census Data\n\n\n4.3.2.2 Description\nIt is a census of the poverty levels in Oklahoma in the year of 2023\n\n\n4.3.2.3 Format\nThis data has 6 fields and 69 rows [1] Label -&gt; categorical [2]population estimate -&gt; numerical [3]below poverty population estimate -&gt; numerical [4]percent below poverty -&gt; percentage\n#3 details Label - categorizing of population by different variables i.e age, ethnicity, race and sex population estimate - calculation of total population by categories under label below poverty population estimate- calculation of total population below poverty levels below poverty by categories under label percentage - calculation of percent of total population divided by total population below poverty\nSource https://data.census.gov/table/ACSST1Y2023.S1701?q=poverty%20in%20oklahoma%20in%202023\n\n\n4.3.2.4 Cleaning\nUpon putting my data into Tableu I had to change all my numerical data into numerical from categorical.\nDashboard Links https://public.tableau.com/authoring/Ok_2023/Dashboard1#2\n\n\n4.3.2.5 Explanation",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
     ]

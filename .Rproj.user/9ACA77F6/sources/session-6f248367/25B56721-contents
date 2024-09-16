@@ -7,7 +7,7 @@ Savannah
 excel
 
 (note that I was not able to upload the photos to here)
-## Wednesday
+### Wednesday
 
 
 ACCESS THE WEB VERSION OF EXCEL THROUGH ONEDRIVE
@@ -102,25 +102,25 @@ This visualization shows a cumulative weekly count of the fully vaccinated popul
 ## week 2
 
 
-## EXCEL: PIVOT TABLE AND CHART 
+#### EXCEL: PIVOT TABLE AND CHART 
 
-### Documentation
+#### Documentation
 
 I am using the airquality data set which lists the daily numeric values of Ozone, Solar Radiation, Wind, and Temperature from the months of May to September in 1973 from the state of New York. The Ozone data was measured from Roosevelt Island, the Solar Radiation data was measured from Central Park, and the both the Wind and Temperature data was measured from the LaGuardia airport. This data was obtained from the New York State Department of Conservation, which provided the Ozone data, as well as the National Weather Service, which provided the meteorological data including the temperature, wind, and solar radiation values.
 
 I used excel to clean the data by removing all the rows with NA values, and performed exploration analysis with histograms and a pivot table and chart.
 
-### Ozone Histogram 
+#### Ozone Histogram 
 **In-class example**
 
 ![](hist_ozone.png)
 
-### Ozonve vs Temp Scatter Plot
+#### Ozonve vs Temp Scatter Plot
 **In-class example**
 
 ![](scatter_ozone_temp.png)
 
-### My first Pivot Table and Chart
+#### My first Pivot Table and Chart
 
 ![](airquality_my_pivot.png)
 
@@ -130,11 +130,11 @@ From my pivot table, I was able to take all the numerical data from the airquali
 
 
 
-## INDIVIDUAL PROJECT DOCUMENTATION
+#### INDIVIDUAL PROJECT DOCUMENTATION
 
 My data set is **Rates of COVID-19 Cases or Deaths by Age Group and Vaccination Status** from the **Centers for Disease Control and Prevention website**.
 
-### Description of data set
+#### Description of data set
 
 This data set was posted on October 21, 2022 and was revised on February 22, 2023. The data reflect cases among people within various age groups with a positive specimen collection date through September 24, 2022, and deaths among people within those age groups with a positive specimen collection date through September 3, 2022.
 
@@ -142,7 +142,7 @@ The data was provided by the CDC COVID-19 Response, Epidemiology Task Force.
 
 This data set has 1,591 rows and 16 columns.
 
-### Purpose of data set
+#### Purpose of data set
 
 This information can be used by the CDC and pharmaceutical companies to see how affective the vaccine is in preventing Covid-19 cases, as well as to see if the vaccine helps prevent death once the virus is contracted.
 
@@ -152,7 +152,7 @@ This information can be used by hospitals to predict the necessary number of bed
 
 This information can be used by insurance companies to determine how much money should be put aside to cover health/life insurance costs.
 
-### Variables in data set and data type
+#### Variables in data set and data type
 
 **OUTCOME:** case or death (text)
 
@@ -186,7 +186,7 @@ This information can be used by insurance companies to determine how much money 
 
 **CONTINUITY CORRECTION:** indicates whether the data was adjusted with the assumption that at least 5 percent of the population in the jurisdiction is un-vaccinated (number) 
 
-### Link to data set
+#### Link to data set
 
 <https://data.cdc.gov/Public-Health-Surveillance/Rates-of-COVID-19-Cases-or-Deaths-by-Age-Group-and/3rge-nu2a/about_data>
 

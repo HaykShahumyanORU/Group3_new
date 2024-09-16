@@ -9,11 +9,11 @@ Excel
 
 ### Wednesday
 
-### Basic Functions
+#### Basic Functions
 
 I can now use sum, average, and more functions to select a whole row and make the process more efficient for large datasets.
 
-### Basic Visualizations
+#### Basic Visualizations
 
 Through using the insert tab, I learned how to choose to represent data with a scatterplot, line plot, bar chart, and more. To customize and format the histogram is easily done in Excel. Each axis can be labeled for the person viewing to understand.
 
@@ -23,7 +23,7 @@ Through using the insert tab, I learned how to choose to represent data with a s
 
 From the Dataset, we see a trend that as the age of the tree increases, the circumference also increases. This is consistent for different types of trees and helps us see into history of how long a tree survived. Another method is also to count the rings once the tree is cut down. However, using the circumference gives a qualitative measurement of when the tree can still be alive and aged.
 
-### Friday
+#### Friday
 
 The US Bureau of Labor and Statistics offers many data sets to do with the work force in America. This data is found from civilian unemployment rates over the past 10 years including people of different ethnicity.
 
@@ -33,29 +33,29 @@ The visualization shows there is a peak in unemployment rate in the year 2020-20
 
 ## Week 2
 
-## Air Quality Pivot Tables, Wednesday 09/04/24
+### Wednesday 
 
-### Histogram
+#### Histogram
 
 I am using the air quality data set which is shows the ozone ppm distribution based on temperature, month and day. Th data was obtained from the New York State Department of Conservation and the National Weather Service. The temperature was taking as the maximum daily temperature at LaGuardia airport. The mean ozone is measured in parts per billion from 13:00 to 15:00 at Roosevelt Island.
 
 I used excel to clean the data through filtration by removing the NA values. I then did exploration analysis.
 
-### Ozone Histogram
+#### Ozone Histogram
 
 ![](hist_ozone_navam.png)
 
-### Ozone vs. Temp Scatterplot
+#### Ozone vs. Temp Scatterplot
 
 ![](scat_oz_temp_navam.png)
 
-### My First Pivot Table
+#### My First Pivot Table
 
 ![](avg_ozone_navam.png)
 
 This table shows the difference in averages of ozone in May versus September. The trend shows that the average seems to be higher at the start of the month and decreases gradually. In September there is a general trend of higher ozone levels per day compared to May. This trend may reveal something new about the ozone levels and air quality.
 
-## Context of Dataset, Friday 09/06/24
+### Friday 
 
 U.S. Bureau of Labor Statistics
 
@@ -64,4 +64,22 @@ The Consumer Expenditure Surveys (CE) are national studies by the U.S. Bureau of
 CE data are valuable for both government and private organizations that focus on specific population groups, including the elderly, low-income families, urban residents, and individuals receiving Supplemental Nutrition Assistance Program (SNAP) benefits. Economic policymakers use this data to evaluate how policy changes affect living standards among various socioeconomic groups, while econometricians leverage it to build models for predicting economic outcomes.
 
 I plan to break up all the parts of the data to the main sections to compare how much consumers spend on each category in life.
+
+## Week 3
+
+### Wednesday
+
+#### Orchard Sprays
+
+An experiment was conducted to evaluate the effectiveness of various orchard spray components in repelling honeybees, using a Latin square design. In this experiment, dry comb cells were filled with specific amounts of lime sulfur emulsion mixed in sucrose solution. Seven concentrations of lime sulfur were tested, ranging from 1/100 to 1/1,562,500, with each concentration decreasing by factors of 1/5, along with a control solution containing no lime sulfur. A had the highest level of lime sulpher while H had no lime sulphur. To assess the bees' responses, 100 bees were released into a chamber for two hours, and the decrease in solution volume in each cell was measured to determine the repellency of the different concentrations.
+
+[Dashboard on Tableau](https://public.tableau.com/views/OrchardSpraysVizPratitiNavam/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link){.uri}
+
+### Friday
+
+- Pratiti will work on employment and wages in different states collectively -
+
+The Quarterly Census of Employment and Wages (QCEW) provides detailed employment and wage data across various industries, states, and the entire U.S. For the first quarter of 2024, the dataset encompasses private sector employment and wages across all industries and establishment sizes. This comprehensive dataset, sourced from the Bureau of Labor Statistics, allows for an in-depth analysis of employment trends and wage patterns nationwide. The QCEW data is instrumental in understanding the economic landscape, providing valuable insights into employment distribution and wage structures across different sectors and regions.
+
+[Dashboard on Tableau](https://public.tableau.com/shared/HBFD74K5G?:display_count=n&:origin=viz_share_link){.uri}
 

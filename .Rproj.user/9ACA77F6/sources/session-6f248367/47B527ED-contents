@@ -69,28 +69,28 @@ this graph shows us that the light-medium vehicles are the ones that were sold t
 
 ## Week 2
 
-## Wednesday
+### Wednesday
 
-## Histogram
+#### Histogram
 
 I am using the airquality dataset, which is ...
 
 
 I use excel to clean the data, remove all the rows which have NA values, and I did an exploration analysis
 
-### Ozone Histogram
+#### Ozone Histogram
 
 ![](Screenshot 2024-09-04 144849.png)
 
-### Ozone vs Temp
+#### Ozone vs Temp
 
 ![](Screenshot 2024-09-04 145425.png)
-### which day out of all the months had the most solar R
+#### which day out of all the months had the most solar R
 
 ![](Screenshot 2024-09-04 152000.png)
 
 
-## friday
+### friday
 
 Today I am learning about pivot charts which are extended from pivot tables. To get to my insert chart I selected all of my pivot table and near the insert tab there was an option for a pivot chart.
 
@@ -104,3 +104,38 @@ This graph shows how for each day for each month, the ratio of each value. For e
 ![](Screenshot 2024-09-07 221735.png)
 
 This pivot table and pivot chart for my data is representing how much of the market is taken up by which type of vehicles. We can see visually that generally, there is a trend that the shorter the distance for the commercial vehicles, the more of those types of vehicles are bought. My data for this week is the vehicle stock. The X line represents how much vehicles are sold, while the Y line lists the amount of miles expected for that commercial vehicle type. 
+
+
+## Week 3
+
+### Wednesday
+
+A data frame with 20 observations on 3 variables.
+
+[, 1]	extra	numeric	increase in hours of sleep
+[, 2]	group	factor	drug given
+[, 3]	ID	factor	patient ID
+
+Using the sleep dataset to create my first dashboard
+
+<https://public.tableau.com/app/profile/hayk.shahumyan/viz/Wednesdayweek3/Dashboard1>
+
+### Friday
+
+I plan to work on fuel costs of vehicles of projected till 2040
+
+Format
+
+There are 3 variables we focus on:
+cost of electricity
+cost of diesel
+cost of hydrogen 
+from now till 2050
+
+Details
+
+We can see trends of downward prices of electricity and hydrogen, while diesel is mostly stable in price
+
+
+<https://public.tableau.com/app/profile/hayk.shahumyan/viz/Week3Friday-Saturday/Dashboard1>
+
