@@ -90,6 +90,16 @@
     ]
   },
   {
+    "objectID": "Hayk.html#week-5",
+    "href": "Hayk.html#week-5",
+    "title": "1  Hayk",
+    "section": "1.8 Week 5",
+    "text": "1.8 Week 5",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
+    ]
+  },
+  {
     "objectID": "Pratiti.html",
     "href": "Pratiti.html",
     "title": "2  Pratiti",
@@ -190,6 +200,16 @@
     ]
   },
   {
+    "objectID": "Pratiti.html#week-5",
+    "href": "Pratiti.html#week-5",
+    "title": "2  Pratiti",
+    "section": "2.10 Week 5",
+    "text": "2.10 Week 5",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
+    ]
+  },
+  {
     "objectID": "Savannah.html",
     "href": "Savannah.html",
     "title": "3  Savannah",
@@ -235,6 +255,16 @@
     "title": "3  Savannah",
     "section": "3.4 Week 4",
     "text": "3.4 Week 4\n\n3.4.1 Wednesday and Friday\nimport numpy as np\narr = np.array([1,2,3,4,5])\nmy_list = [1, 2, 3, 4, 5]\nimport pandas as pd\ndata = {'Ozone': [41, 36, 12], 'Temp': [67, 72, 74]}\ndf = pd.DataFrame(data)\ndf = pd.read_csv('C:\\\\Users\\\\rdudley\\\\Downloads\\\\airquality_datasets.csv')\n# Summary of the dataset\nprint(df.info())\nprint(df.describe())\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 153 entries, 0 to 152\nData columns (total 6 columns):\n #   Column   Non-Null Count  Dtype  \n---  ------   --------------  -----  \n 0   Ozone    116 non-null    float64\n 1   Solar.R  146 non-null    float64\n 2   Wind     153 non-null    float64\n 3   Temp     153 non-null    int64  \n 4   Month    153 non-null    int64  \n 5   Day      153 non-null    int64  \ndtypes: float64(3), int64(3)\nmemory usage: 7.3 KB\nNone\n            Ozone     Solar.R        Wind        Temp       Month         Day\ncount  116.000000  146.000000  153.000000  153.000000  153.000000  153.000000\nmean    42.129310  185.931507    9.957516   77.882353    6.993464   15.803922\nstd     32.987885   90.058422    3.523001    9.465270    1.416522    8.864520\nmin      1.000000    7.000000    1.700000   56.000000    5.000000    1.000000\n25%     18.000000  115.750000    7.400000   72.000000    6.000000    8.000000\n50%     31.500000  205.000000    9.700000   79.000000    7.000000   16.000000\n75%     63.250000  258.750000   11.500000   85.000000    8.000000   23.000000\nmax    168.000000  334.000000   20.700000   97.000000    9.000000   31.000000\nimport matplotlib.pyplot as plt\n\n# Ozone Histogram\nplt.figure(figsize=(8, 6))\nplt.hist(df['Ozone'].dropna(), bins=20, color='blue', edgecolor='black')\nplt.title('Distribution of Ozone Levels')\nplt.xlabel('Ozone (ppb)')\nplt.ylabel('Frequency')\nplt.show()\n\n# Temp Histogram\nplt.figure(figsize=(8, 6))\nplt.hist(df['Temp'].dropna(), bins=20, color='orange', edgecolor='black')\nplt.title('Distribution of Temperature')\nplt.xlabel('Temperature (°F)')\nplt.ylabel('Frequency')\nplt.show()\n\n\n\npng\n\n\n\n\n\npng\n\n\n# Boxplot for Ozone\nplt.figure(figsize=(8, 6))\nplt.boxplot(df['Ozone'].dropna())\nplt.title('Boxplot of Ozone Levels')\nplt.ylabel('Ozone (ppb)')\nplt.show()\n\n# Boxplot for Temp\nplt.figure(figsize=(8, 6))\nplt.boxplot(df['Temp'].dropna())\nplt.title('Boxplot of Temperature')\nplt.ylabel('Temperature (°F)')\nplt.show()\n\n\n\npng\n\n\n\n\n\npng\n\n\nimport seaborn as sns\n\n# Scatter plot with regression line\nplt.figure(figsize=(10, 6))\nsns.scatterplot(x='Temp', y='Ozone', hue='Month', data=df)\nplt.title('Temperature vs Ozone Levels by Month')\nplt.xlabel('Temperature (°F)')\nplt.ylabel('Ozone (ppb)')\nplt.show()\n\n# Correlation matrix\ncorr = df[['Ozone', 'Temp', 'Wind']].corr()\nsns.heatmap(corr, annot=True, cmap='coolwarm')\nplt.title('Correlation Matrix')\nplt.show()\n\n\n\npng\n\n\n\n\n\npng",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
+    ]
+  },
+  {
+    "objectID": "Savannah.html#week-5",
+    "href": "Savannah.html#week-5",
+    "title": "3  Savannah",
+    "section": "3.5 Week 5",
+    "text": "3.5 Week 5",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
     ]

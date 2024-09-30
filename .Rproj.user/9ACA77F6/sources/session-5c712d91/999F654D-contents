@@ -1,0 +1,152 @@
+---
+title: "midterm_viz_navam092724"
+author: Pratiti Navam
+format: html
+editor: visual
+---
+
+# **Labor Statistics**
+
+CSC-477/GCSC-577 Visualization \@ ORU
+
+Author: Pratiti Navam
+
+Published: October 4, 2024
+
+# **1. Data Access and Collection Methods**
+
+In this section, provide a formal explanation of how the data can be accessed and collected.
+
+-   **Source Overview:** Introduce the dataset, specifying its origin (e.g., USDA, WHO, or FAO) and its relevance.
+
+-   **File Formats and Access:** Discuss the formats available for the dataset (CSV, Excel, JSON, etc.) and provide instructions for downloading or retrieving the data from the source.
+
+-   **Data Acquisition Procedure:** Outline the steps required to acquire the data, including any necessary permissions, logins, or API usage.
+
+*Example:*
+
+```         
+The dataset can be accessed through the USDA's National Agricultural Statistics Service, under the section "Crop Yield Data." It is available in CSV format for public download.
+```
+
+# **2. Data Variables and Contextual Framework**
+
+This chapter provides a detailed breakdown of the variables within the dataset and contextualizes the purpose behind their collection.
+
+-   **Variables and Definitions:**
+
+    -   Define the key variables in the dataset (e.g., crop yield, year, region, precipitation).
+
+    -   Explain why these variables are important for understanding agricultural productivity or policy decisions.
+
+-   **Data Collection Purpose:**
+
+    -   Discuss the underlying objectives for gathering this data. Explain who the primary stakeholders are (e.g., policymakers, researchers, farmers) and how they use this data to make informed decisions.
+
+-   **Contextual Significance:**
+
+    -   Provide historical or contextual background that justifies why this dataset is crucial. Mention specific challenges or global issues this data addresses (e.g., food security, climate change impacts on agriculture).
+
+*Example:*
+
+```         
+The USDA collects crop yield data annually to monitor agricultural production, which informs national food security policies and international trade negotiations.
+```
+
+# **3. Analytical Approach and Visualization Techniques**
+
+Describe the analytical methodologies and visualization techniques used to explore the dataset in this section.
+
+-   **Analytical Methods:**
+
+    -   Explain the analytical approach, including statistical methods or data preprocessing steps applied to the dataset to prepare it for visualization (e.g., filtering, aggregation, etc.).
+
+-   **Visualization Techniques:**
+
+    -   Detail the types of visualizations used to convey the data’s insights. For each visualization (e.g., line charts for trends, bar charts for comparisons), provide a rationale for its selection.
+
+-   **Key Observations:**
+
+    -   Outline what specific trends, patterns, or anomalies are intended to be highlighted by these visualizations.
+
+*Example:*
+
+```         
+Line charts were used to track changes in crop yields from 2010 to 2020, allowing for clear identification of trends potentially linked to climate variability.
+```
+
+# **4. Insights Derived from Data Analysis**
+
+This chapter focuses on interpreting the results of your data analysis and visualizations.
+
+-   **Key Findings:**
+
+    -   Summarize the primary insights revealed through your analysis, highlighting significant patterns or trends observed in the data.
+
+-   **Contextual Interpretation:**
+
+    -   Provide an interpretation of these findings within the broader agricultural or policy context. Relate the trends to real-world issues, such as climate change, resource allocation, or food security challenges.
+
+-   **Comparative Analysis:**
+
+    -   If applicable, compare the dataset’s findings with historical data, expected norms, or benchmarks to emphasize any notable deviations.
+
+*Example:*
+
+```         
+The data reveals a 15% decline in crop yields in the Midwest region over the past decade, likely linked to increased occurrences of drought. This decline is more pronounced compared to historical averages.
+```
+
+# **5. Discussion of Data Quality and Limitations**
+
+In this section, critically examine the quality of the data and the limitations of your analysis.
+
+-   **Data Integrity:**
+
+    -   Assess the quality of the data, noting any issues such as missing or incomplete data, inaccuracies, or inconsistencies.
+
+-   **Limitations of Analysis:**
+
+    -   Discuss any limitations inherent in the dataset that may affect the validity or generalizability of your findings. These could include sample size issues, lack of granularity, or data biases.
+
+-   **Potential Improvements:**
+
+    -   Suggest ways in which the data collection process or analytical approach could be improved to yield better or more actionable insights.
+
+*Example:*
+
+```         
+Some regions had significant gaps in data for the years 2015-2016, which may limit the reliability of trends observed during this period. Future analyses could benefit from more granular data collection at a regional level.
+```
+
+# **6. Conclusions and Implications for Future Research**
+
+Provide a clear summary of your findings and their potential implications in this section.
+
+-   **Summary of Findings:**
+
+    -   Recap the major insights discovered through the data analysis.
+
+-   **Broader Implications:**
+
+    -   Discuss how the findings could inform future decisions or strategies. This might include agricultural policies, resource management, or further research initiatives.
+
+-   **Recommendations:**
+
+    -   Offer practical recommendations for stakeholders based on your findings. What actions should be considered based on the data?
+
+*Example:*
+
+```         
+The decline in yields suggests a need for improved drought-resistant crop varieties and more resilient farming practices in affected regions.
+```
+
+# **7. References**
+
+Include all references to the data source, documentation, and any literature or external research used during the analysis.
+
+*Example Reference:*
+
+```         
+USDA National Agricultural Statistics Service. (2023). Annual Crop Yield Data. Available from: [https://www.
+```

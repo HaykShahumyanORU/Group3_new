@@ -3,7 +3,7 @@
     "path": "~/Group3/Pratiti.qmd",
     "project_path": "Pratiti.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2942254380",
     "contents": "",
     "dirty": false,
     "created": 1725900863343.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "24,0",
-        "scrollLine": "0"
+        "cursorPosition": "310,15",
+        "scrollLine": "300"
     },
     "folds": "",
-    "lastKnownWriteTime": 1726514805,
+    "lastKnownWriteTime": 1727718328,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1726514805375,
+    "last_content_update": 1727718328901,
     "read_only": false,
     "read_only_alternatives": []
 }
