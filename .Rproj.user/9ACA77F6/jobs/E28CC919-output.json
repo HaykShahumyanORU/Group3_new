@@ -10,3 +10,7 @@
 [1,"GET: /\n"]
 [1,"GET: /Hayk.html\n"]
 [1,"GET: /Shae.html\n"]
+[1,"GET: /Hayk.html\nWARN: connection closed before message completed\n"]
+[1,"GET: /Hayk.html\nWARN: connection closed before message completed\n"]
+[1,"GET: /Hayk.html\n"]
+[1,"GET: /Pratiti.html\n"]

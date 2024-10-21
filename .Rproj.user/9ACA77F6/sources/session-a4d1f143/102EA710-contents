@@ -1,0 +1,47 @@
+---
+title: "intro to R, using RStudio and Quarto"
+author: "Hayk Shahumyan"
+---
+
+## Examples
+
+Lets create a new R chunk,
+
+Ctrl+Alt+i
+
+
+```{r}
+  x <- -100:100
+  y <- x^2
+  plot(x,y)
+```
+
+
+
+```{r}
+iris
+boxplot(iris$Sepal.Length)
+```
+
+```{r}
+df <- data.frame(x,y)
+df
+```
+
+
+```{r}
+str(x)
+str(y)
+str(df)
+str(iris)
+```
+```{r}
+x[201]
+df[,2]
+```
+
+```{r}
+summary(iris)
+
+```
+

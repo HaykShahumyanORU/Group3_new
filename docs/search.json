@@ -100,6 +100,16 @@
     ]
   },
   {
+    "objectID": "Hayk.html#week-after-fall-break",
+    "href": "Hayk.html#week-after-fall-break",
+    "title": "1  Hayk",
+    "section": "1.9 Week after fall break",
+    "text": "1.9 Week after fall break\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)\nhttps://www.bls.gov/wsp/overview.htm\nThe data provides a historical record of annual work stoppages in the U.S. involving 1,000 or more workers, starting from 1947. It includes the following key information:\nThe year of the work stoppage.\nThe number of work stoppages that began in a given year and those still in effect.\nThe number of workers involved (in thousands).\nThe number of days of idleness (in thousands) caused by these stoppages.\nThe percentage of total working time lost due to these stoppages.\nThis dataset is focused on capturing the frequency and economic impact of large-scale labor disruptions over time.\ndirect summary from the website:\nThe Bureau of Labor Statistics has two types of data about work stoppages: Work Stoppages program data and the Strike Report.\nThe Work Stoppages program provides monthly and annual data of major work stoppages involving 1,000 or more workers lasting one full shift or longer. The monthly and annual data show the establishment and union(s) involved in the work stoppage along with the location, the number of workers and the days of idleness. The monthly data list all work stoppages involving 1,000 or more workers that occurred during the full calendar month for each month of the year. The annualized data provide statistics, analysis and details of each work stoppage of 1,000 or more workers that occurred during the year. The work stoppages data are gathered from public news sources, such as newspapers and the Internet. The BLS does not distinguish between strikes and lock-outs in the data; both are included in the term “work stoppages”.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
+    ]
+  },
+  {
     "objectID": "Pratiti.html",
     "href": "Pratiti.html",
     "title": "2  Pratiti",
@@ -270,6 +280,16 @@
     ]
   },
   {
+    "objectID": "Savannah.html#week-after-fall-break",
+    "href": "Savannah.html#week-after-fall-break",
+    "title": "3  Savannah",
+    "section": "3.6 Week after fall break",
+    "text": "3.6 Week after fall break\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
+    ]
+  },
+  {
     "objectID": "Shae.html",
     "href": "Shae.html",
     "title": "4  Shae",
@@ -325,6 +345,16 @@
     "title": "4  Shae",
     "section": "4.5 Week 5",
     "text": "4.5 Week 5",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#week-after-fall-break",
+    "href": "Shae.html#week-after-fall-break",
+    "title": "4  Shae",
+    "section": "4.6 Week after fall break",
+    "text": "4.6 Week after fall break\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)\nThe dataset I chose is titled “Household Data Annual Averages” and it tracks the employment status of the civilian noninstitutional population in the U.S. from 1948 to the present. It includes various metrics in thousands of individuals, such as:\nCivilian Noninstitutional Population: Total number of people aged 16 and over not in military or institutional settings.\nCivilian Labor Force: Individuals who are either employed or unemployed, represented as a percentage of the population.\nEmployment and Unemployment: Counts and percentages of employed and unemployed individuals, differentiated by agriculture and nonagricultural industries.\nNot in Labor Force: Number of people not participating in the labor market.\nThe dataset highlights trends in labor force participation, employment rates, and unemployment over the decades, showing changes in economic conditions and labor market dynamics. For example, it reflects fluctuations in employment rates during economic recessions and expansions. The dataset is subject to revisions due to updates in population controls, which may impact historical comparisons.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
     ]
