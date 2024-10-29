@@ -1,0 +1,2 @@
+"0","library(readxl)"
+"0","data <- read_excel(""cpsaat39.xlsx"", range = ""A71:B82"", col_names = c(""Occupations"", ""Total Number of Workers""))"

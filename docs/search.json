@@ -104,7 +104,27 @@
     "href": "Hayk.html#week-after-fall-break",
     "title": "1  Hayk",
     "section": "1.9 Week after fall break",
-    "text": "1.9 Week after fall break\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)\nhttps://www.bls.gov/wsp/overview.htm\nThe data provides a historical record of annual work stoppages in the U.S. involving 1,000 or more workers, starting from 1947. It includes the following key information:\nThe year of the work stoppage.\nThe number of work stoppages that began in a given year and those still in effect.\nThe number of workers involved (in thousands).\nThe number of days of idleness (in thousands) caused by these stoppages.\nThe percentage of total working time lost due to these stoppages.\nThis dataset is focused on capturing the frequency and economic impact of large-scale labor disruptions over time.\ndirect summary from the website:\nThe Bureau of Labor Statistics has two types of data about work stoppages: Work Stoppages program data and the Strike Report.\nThe Work Stoppages program provides monthly and annual data of major work stoppages involving 1,000 or more workers lasting one full shift or longer. The monthly and annual data show the establishment and union(s) involved in the work stoppage along with the location, the number of workers and the days of idleness. The monthly data list all work stoppages involving 1,000 or more workers that occurred during the full calendar month for each month of the year. The annualized data provide statistics, analysis and details of each work stoppage of 1,000 or more workers that occurred during the year. The work stoppages data are gathered from public news sources, such as newspapers and the Internet. The BLS does not distinguish between strikes and lock-outs in the data; both are included in the term “work stoppages”.",
+    "text": "1.9 Week after fall break",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
+    ]
+  },
+  {
+    "objectID": "Hayk.html#second-semester-schedule",
+    "href": "Hayk.html#second-semester-schedule",
+    "title": "1  Hayk",
+    "section": "1.10 Second semester schedule",
+    "text": "1.10 Second semester schedule\nAll charts made in r studio or shiny and 1-3 sentence summary with each visualization\nNov 2: create a dual-line chart comparing number of work stoppages beginning and number of work stoppages in effect\nNov 9: create a stacked area chart comparing workers involved beginning and workers involved in effect\nNov 16: create a scatter plot comparing days of idleness and percent total working time\nNov 23: create a bubble chart comparing number of work stoppages beginning, workers involved beginning and days of idleness\nNov 30: create a 3D scatter plot comparing the number of work stoppages in effect, workers involved in effect, and percent total working time\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)\nhttps://www.bls.gov/wsp/overview.htm\nThe data provides a historical record of annual work stoppages in the U.S. involving 1,000 or more workers, starting from 1947. It includes the following key information:\nThe year of the work stoppage.\nThe number of work stoppages that began in a given year and those still in effect.\nThe number of workers involved (in thousands).\nThe number of days of idleness (in thousands) caused by these stoppages.\nThe percentage of total working time lost due to these stoppages.\nThis dataset is focused on capturing the frequency and economic impact of large-scale labor disruptions over time.\ndirect summary from the website:\nThe Bureau of Labor Statistics has two types of data about work stoppages: Work Stoppages program data and the Strike Report.\nThe Work Stoppages program provides monthly and annual data of major work stoppages involving 1,000 or more workers lasting one full shift or longer. The monthly and annual data show the establishment and union(s) involved in the work stoppage along with the location, the number of workers and the days of idleness. The monthly data list all work stoppages involving 1,000 or more workers that occurred during the full calendar month for each month of the year. The annualized data provide statistics, analysis and details of each work stoppage of 1,000 or more workers that occurred during the year. The work stoppages data are gathered from public news sources, such as newspapers and the Internet. The BLS does not distinguish between strikes and lock-outs in the data; both are included in the term “work stoppages”.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
+    ]
+  },
+  {
+    "objectID": "Hayk.html#oct-28th",
+    "href": "Hayk.html#oct-28th",
+    "title": "1  Hayk",
+    "section": "1.11 oct 28th",
+    "text": "1.11 oct 28th\n\n# Load necessary libraries\nlibrary(ggplot2)\nlibrary(readxl)\n\n# Load the dataset\ndata4 &lt;- read_excel(\"cleaned_annual_listing.xlsx\", sheet = \"Sheet1\")\n\n# Ensure Year column is numeric and remove NA values\ndata4$Year &lt;- as.numeric(data4$Year)\n\nWarning: NAs introduced by coercion\n\ndata4 &lt;- data4[!is.na(data4$Year), ]\n\n# Create a dual-line chart with adjusted x-axis labels\nggplot(data4, aes(x = Year)) +\n  geom_line(aes(y = Number_of_Work_Stoppages_Beginning, color = \"Work Stoppages Beginning\", group = 1), na.rm = TRUE) +\n  geom_line(aes(y = Number_of_Work_Stoppages_In_Effect, color = \"Work Stoppages In Effect\", group = 1), na.rm = TRUE) +\n  labs(title = \"Comparison of Work Stoppages Beginning and In Effect Over the Years\",\n       x = \"Year\",\n       y = \"Number of Work Stoppages\",\n       color = \"Legend\") +\n  theme_minimal() +\n  scale_x_continuous(breaks = seq(min(data4$Year, na.rm = TRUE), max(data4$Year, na.rm = TRUE), by = 5)) + # Show every 5th year\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels\n\n\n\n\n\n\n\n\nThe graph shows a clear decline in the number of work stoppages that both began and were in effect over the years, especially prominent from the mid-20th century onward. The “Work Stoppages Beginning” generally tracked slightly above “Work Stoppages In Effect,” but both followed a similar downward trend. This decline may indicate changes in labor practices, regulations, or economic conditions affecting work stoppages over time.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
     ]
@@ -220,6 +240,26 @@
     ]
   },
   {
+    "objectID": "Pratiti.html#second-semester-schedule",
+    "href": "Pratiti.html#second-semester-schedule",
+    "title": "2  Pratiti",
+    "section": "10.1 Second semester schedule",
+    "text": "10.1 Second semester schedule\nAll charts made in r studio or shiny and 1-3 sentence summary with each visualization\nNov 2: create a box plot comparing educational attainment and median usual weekly earnings\nNov 9: create a bar chart comparing educational attainment and unemployment rate\nNov 16: create a scatter plot comparing median usual weekly earnings and unemployment rate\nNov 23: create a heatmap comparing total fatal injuries and industry\nNov 30: create a dot plot comparing fatal injury causes and industry\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)\nhttps://www.bls.gov/emp/tables/unemployment-earnings-education.htm\nIn 2023, data from the Bureau of Labor Statistics highlights a strong link between educational attainment, earnings, and unemployment rates. Individuals with higher levels of education tend to earn more and face lower unemployment. Those with advanced degrees, such as doctoral or professional degrees, have the highest median weekly earnings, over $2,100, and the lowest unemployment rates, under 2%. Master’s degree holders also enjoy relatively high earnings of $1,737 per week, with a low 2.0% unemployment rate. Bachelor’s degree holders earn $1,493 weekly with a 2.2% unemployment rate.\nAs educational attainment decreases, so do earnings, while unemployment rates rise. Individuals with an associate’s degree earn $1,058 per week with a 2.7% unemployment rate, while those with some college but no degree earn $992 weekly with a 3.3% unemployment rate. High school graduates see further declines, earning $899 per week with a 3.9% unemployment rate. Those with less than a high school diploma face the greatest challenges, with the lowest median earnings of $708 per week and the highest unemployment rate of 5.6%. Overall, education plays a key role in determining both income potential and job stability.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
+    ]
+  },
+  {
+    "objectID": "Pratiti.html#oct-28th",
+    "href": "Pratiti.html#oct-28th",
+    "title": "2  Pratiti",
+    "section": "10.2 Oct 28th",
+    "text": "10.2 Oct 28th\n\nlibrary(plotly)\n\nLoading required package: ggplot2\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nlibrary(ggplot2)\n\n\n# Load necessary libraries\nlibrary(plotly)\n\n# Import the dataset\ndata &lt;- read.csv(\"education.csv\", header = TRUE, stringsAsFactors = FALSE, na.strings = c(\"\", \"NA\"))\n\n# Ensure relevant columns are numeric and clean them\ndata$`Unemployment.rate....` &lt;- as.numeric(gsub(\",\", \"\", as.character(data$`Unemployment.rate....`)))\n\n# Check for NAs after conversion\nna_count &lt;- sum(is.na(data$`Unemployment.rate....`))\nif (na_count &gt; 0) {\n  cat(\"Number of NA values in unemployment rate:\", na_count, \"\\n\")\n}\n\nNumber of NA values in unemployment rate: 1 \n\n# Filter out rows where unemployment rate is NA\nfiltered_data &lt;- data[!is.na(data$`Unemployment.rate....`), ]\n\n# Sort the data by unemployment rate from lowest to highest\nfiltered_data &lt;- filtered_data[order(filtered_data$`Unemployment.rate....`), ]\n\n# Check if the filtered data is empty\nif (nrow(filtered_data) == 0) {\n  stop(\"Filtered data is empty. Please check the dataset for valid unemployment rate values.\")\n}\n\n# Create the scatter plot using Plotly\nfig &lt;- plot_ly(\n  data = filtered_data,\n  x = ~`Educational.attainment`,\n  y = ~`Unemployment.rate....`,\n  type = 'scatter',\n  mode = 'markers',\n  marker = list(\n    color = ~`Unemployment.rate....`,  # Color based on unemployment rate\n    colorscale = 'Reds',               # Color scale\n    showscale = TRUE,                  # Show color scale\n    size = 10                          # Size of the points\n  )\n) %&gt;%\n  layout(\n    title = \"Scatter Plot of Educational Attainment vs. Unemployment Rate\",\n    xaxis = list(title = \"Educational Attainment\"),\n    yaxis = list(title = \"Unemployment Rate (%)\"),\n    showlegend = FALSE\n  )\n\n# Show the plot\nfig\n\n\n\n\n\nThe scatter plot illustrates the relationship between educational attainment and unemployment rates, showcasing how higher levels of education are generally associated with lower unemployment. Each point represents a specific educational category, with color intensity reflecting the unemployment rate—darker shades indicating higher rates. This visual, sourced from the Bureau of Labor Statistics (BLS), emphasizes the importance of education in influencing job market outcomes, highlighting that individuals with higher educational qualifications tend to experience greater job stability.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
+    ]
+  },
+  {
     "objectID": "Savannah.html",
     "href": "Savannah.html",
     "title": "3  Savannah",
@@ -284,7 +324,37 @@
     "href": "Savannah.html#week-after-fall-break",
     "title": "3  Savannah",
     "section": "3.6 Week after fall break",
-    "text": "3.6 Week after fall break\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)",
+    "text": "3.6 Week after fall break",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
+    ]
+  },
+  {
+    "objectID": "Savannah.html#second-semester-schedule",
+    "href": "Savannah.html#second-semester-schedule",
+    "title": "3  Savannah",
+    "section": "3.7 Second semester schedule",
+    "text": "3.7 Second semester schedule\nAll charts made in r studio or shiny and 1-3 sentence summary with each visualization\nNov 2: create a bar chart comparing the number of workers, and their occupation\nNov 9: create a stacked area plot comparing gender distribution of workers in each occupation\nNov 16: create a dot plot comparing weekly earnings by their occupation\nNov 23: create a scatter plot comparing median weekly earnings vs number of workers\nNov 30: create a line chart comparing the gender pay gap across occupations\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
+    ]
+  },
+  {
+    "objectID": "Savannah.html#october-28th",
+    "href": "Savannah.html#october-28th",
+    "title": "3  Savannah",
+    "section": "3.8 October 28th",
+    "text": "3.8 October 28th",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
+    ]
+  },
+  {
+    "objectID": "Savannah.html#bar-chart",
+    "href": "Savannah.html#bar-chart",
+    "title": "3  Savannah",
+    "section": "3.9 Bar Chart",
+    "text": "3.9 Bar Chart\nVariables: Occupation and Total Number of Workers\n\n3.9.1 Import dataset\n\nlibrary(readxl)\ndata &lt;- read_excel(\"cpsaat39.xlsx\", range = \"A71:B82\", col_names = c(\"Occupations\", \"Total Number of Workers\"))\n\n\n\n3.9.2 Create Visualization\n\nlibrary(ggplot2)\nggplot(data, aes(x = reorder(Occupations, -`Total Number of Workers`), \n                 y = `Total Number of Workers`, \n                 fill = `Total Number of Workers`)) +\n  geom_bar(stat = \"identity\", color = \"black\", width = 0.8) +  # Add color and border\n  geom_text(aes(label = `Total Number of Workers`), \n            vjust = -0.3,  # Move labels higher above the bars\n            color = \"black\", size = 3.5) +  # Slightly larger font size for labels\n  scale_fill_gradient(low = \"lightblue\", high = \"darkblue\") +  # Gradient color for bars\n  labs(title = \"2023 US Total Number of Workers per IT Occupation\",\n       subtitle = \"Occupations sorted from highest to lowest number of workers by thousands\",\n       x = \"Occupations\",\n       y = \"Workers\") +\n  ylim(0, max(data$`Total Number of Workers`) * 1.2) +  # Expand y-axis limits\n  theme_minimal(base_size = 12) +  # Increase base font size\n  theme(\n    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8),  # Adjust size for x-axis labels\n    axis.text.y = element_text(size = 8),  # Adjust size for y-axis numbers\n    axis.title.x = element_text(size = 10, margin = margin(t = 10), face = \"bold\"),  # X-axis title size and style\n    axis.title.y = element_text(size = 10, margin = margin(r = 10), face = \"bold\"),  # Y-axis title size and style\n    plot.title = element_text(face = \"bold\", size = 14, hjust = 0.5),  # Center-align title\n    plot.subtitle = element_text(size = 12, hjust = 0.5),              # Center-align subtitle\n    legend.position = \"none\"                                           # Remove legend\n  )",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Savannah</span>"
     ]
@@ -354,7 +424,97 @@
     "href": "Shae.html#week-after-fall-break",
     "title": "4  Shae",
     "section": "4.6 Week after fall break",
-    "text": "4.6 Week after fall break\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)\nThe dataset I chose is titled “Household Data Annual Averages” and it tracks the employment status of the civilian noninstitutional population in the U.S. from 1948 to the present. It includes various metrics in thousands of individuals, such as:\nCivilian Noninstitutional Population: Total number of people aged 16 and over not in military or institutional settings.\nCivilian Labor Force: Individuals who are either employed or unemployed, represented as a percentage of the population.\nEmployment and Unemployment: Counts and percentages of employed and unemployed individuals, differentiated by agriculture and nonagricultural industries.\nNot in Labor Force: Number of people not participating in the labor market.\nThe dataset highlights trends in labor force participation, employment rates, and unemployment over the decades, showing changes in economic conditions and labor market dynamics. For example, it reflects fluctuations in employment rates during economic recessions and expansions. The dataset is subject to revisions due to updates in population controls, which may impact historical comparisons.",
+    "text": "4.6 Week after fall break",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#second-semester-schedule",
+    "href": "Shae.html#second-semester-schedule",
+    "title": "4  Shae",
+    "section": "4.7 Second Semester Schedule",
+    "text": "4.7 Second Semester Schedule\nAll charts made in r studio or shiny and 1-3 sentence summary with each visualization\nNov 2: create a line chart comparing year with civilian labor force percent\nNov 9: create a stacked bar chart comparing employed agriculture and employed nonagricultural industries\nNov 16: create a line plot comparing year vs unemployed percent\nNov 23: create a dot plot comparing civilian labor force total and not in labor force\nNov 30: create a pie chart comparing workforce distribution in a specific year\n(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)\nThe dataset I chose is titled “Household Data Annual Averages” and it tracks the employment status of the civilian noninstitutional population in the U.S. from 1948 to the present. It includes various metrics in thousands of individuals, such as:\nCivilian Noninstitutional Population: Total number of people aged 16 and over not in military or institutional settings.\nCivilian Labor Force: Individuals who are either employed or unemployed, represented as a percentage of the population.\nEmployment and Unemployment: Counts and percentages of employed and unemployed individuals, differentiated by agriculture and nonagricultural industries.\nNot in Labor Force: Number of people not participating in the labor market.\nThe dataset highlights trends in labor force participation, employment rates, and unemployment over the decades, showing changes in economic conditions and labor market dynamics. For example, it reflects fluctuations in employment rates during economic recessions and expansions. The dataset is subject to revisions due to updates in population controls, which may impact historical comparisons.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#oct-28th",
+    "href": "Shae.html#oct-28th",
+    "title": "4  Shae",
+    "section": "4.8 Oct 28th",
+    "text": "4.8 Oct 28th",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#introduction",
+    "href": "Shae.html#introduction",
+    "title": "4  Shae",
+    "section": "4.9 Introduction",
+    "text": "4.9 Introduction\nThis document presents a visualization comparing the percentage of employed individuals and the unemployment rate over time. The analysis uses historical data on employment and unemployment metrics to provide insights into labor market dynamics.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#data-library-load",
+    "href": "Shae.html#data-library-load",
+    "title": "4  Shae",
+    "section": "4.10 Data &Library Load",
+    "text": "4.10 Data &Library Load",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#introduction-1",
+    "href": "Shae.html#introduction-1",
+    "title": "4  Shae",
+    "section": "4.11 Introduction",
+    "text": "4.11 Introduction\nThis document presents a visualization comparing the percentage of employed individuals and the unemployment rate over time. The analysis uses historical data on employment and unemployment metrics to provide insights into labor market dynamics.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#data-library-load-1",
+    "href": "Shae.html#data-library-load-1",
+    "title": "4  Shae",
+    "section": "4.12 Data &Library Load",
+    "text": "4.12 Data &Library Load\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(readxl)\nlibrary(tidyr)\nlibrary(readr)  # If you're reading CSV or similar formats\nlibrary(ggplot2)\n\n\ndata2 &lt;- read_excel(\"LineGraph.xlsx\")",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#data-clean-and-prepartion",
+    "href": "Shae.html#data-clean-and-prepartion",
+    "title": "4  Shae",
+    "section": "4.13 Data Clean and Prepartion",
+    "text": "4.13 Data Clean and Prepartion\n\ndata_clean &lt;- data2 %&gt;%\n  select(Year, `Total`, `Unemployed Percent\\r\\nof\\r\\nlabor\\r\\nforce`) %&gt;%\n  rename(\n    Employed_Total = `Total`,\n    Unemployed_Percent = `Unemployed Percent\\r\\nof\\r\\nlabor\\r\\nforce`\n  ) %&gt;%\n  mutate(\n    Employed_Total = as.numeric(Employed_Total),\n    Unemployed_Percent = as.numeric(Unemployed_Percent)\n  )",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#visualization",
+    "href": "Shae.html#visualization",
+    "title": "4  Shae",
+    "section": "4.14 Visualization",
+    "text": "4.14 Visualization\n\nggplot(data_clean, aes(x = Employed_Total, y = Unemployed_Percent)) +\n  geom_line(color = \"darkgreen\", size = 1.2) +  # Change line color\n  labs(\n    title = \"Unemployed vs. Employed\",\n    x = \"Employed\",  # Updated x-axis title\n    y = \"Unemployed\"  # Updated y-axis title\n  ) +\n  theme_minimal(base_size = 15) +  # Increase base font size\n  theme(\n    plot.title = element_text(hjust = 0.5, size = 20, face = \"bold\", color = \"black\"),  # Center title, change font size and color\n    axis.title.x = element_text(size = 16, face = \"bold\", color = \"#0072B2\"),  # X-axis title\n    axis.title.y = element_text(size = 16, face = \"bold\", color = \"#0072B2\"),  # Y-axis title\n    axis.text = element_text(size = 14)  # Axis text size\n  )\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#summary-of-visualization",
+    "href": "Shae.html#summary-of-visualization",
+    "title": "4  Shae",
+    "section": "4.15 Summary of Visualization",
+    "text": "4.15 Summary of Visualization\nThis line chart illustrates the relationship between the percentage of employed individuals and the unemployment rate over time. Specifically, it compares the Employed Percentage (representing the proportion of the civilian labor force that is employed) against the Unemployed Percentage (indicating the proportion of the labor force that is unemployed).\nKey Points: Trends Over Time: The chart shows how both employment and unemployment rates have evolved from the data’s starting year to the present. Inverse Relationship: Generally, as the percentage of employed individuals increases, the unemployment rate tends to decrease, indicating an inverse relationship between these two metrics. Economic Insights: The visualization provides insights into economic conditions and labor market dynamics, highlighting periods of growth and recession based on employment trends.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
     ]

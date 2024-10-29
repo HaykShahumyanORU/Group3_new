@@ -1,0 +1,42 @@
+---
+title: "Group Project Visualization 1"
+author: "Savannah Dudley"
+format: html
+---
+
+## Bar Chart 
+**Variables: Occupation and Total Number of Workers**
+
+### Import dataset
+```{r}
+library(readxl)
+data <- read_excel("cpsaat39.xlsx", range = "A71:B82", col_names = c("Occupations", "Total Number of Workers"))
+```
+
+### Create Visualization
+```{r}
+library(ggplot2)
+ggplot(data, aes(x = reorder(Occupations, -`Total Number of Workers`), 
+                 y = `Total Number of Workers`, 
+                 fill = `Total Number of Workers`)) +
+  geom_bar(stat = "identity", color = "black", width = 0.8) +  # Add color and border
+  geom_text(aes(label = `Total Number of Workers`), 
+            vjust = -0.3,  # Move labels higher above the bars
+            color = "black", size = 3.5) +  # Slightly larger font size for labels
+  scale_fill_gradient(low = "lightblue", high = "darkblue") +  # Gradient color for bars
+  labs(title = "2023 US Total Number of Workers per IT Occupation",
+       subtitle = "Occupations sorted from highest to lowest number of workers by thousands",
+       x = "Occupations",
+       y = "Workers") +
+  ylim(0, max(data$`Total Number of Workers`) * 1.2) +  # Expand y-axis limits
+  theme_minimal(base_size = 12) +  # Increase base font size
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8),  # Adjust size for x-axis labels
+    axis.text.y = element_text(size = 8),  # Adjust size for y-axis numbers
+    axis.title.x = element_text(size = 10, margin = margin(t = 10), face = "bold"),  # X-axis title size and style
+    axis.title.y = element_text(size = 10, margin = margin(r = 10), face = "bold"),  # Y-axis title size and style
+    plot.title = element_text(face = "bold", size = 14, hjust = 0.5),  # Center-align title
+    plot.subtitle = element_text(size = 12, hjust = 0.5),              # Center-align subtitle
+    legend.position = "none"                                           # Remove legend
+  )
+```

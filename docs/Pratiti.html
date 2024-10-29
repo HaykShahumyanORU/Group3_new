@@ -102,6 +102,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
 
 
 </head>
@@ -215,7 +233,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#insights-derived-from-data-analysis" id="toc-insights-derived-from-data-analysis" class="nav-link" data-scroll-target="#insights-derived-from-data-analysis"><span class="header-section-number">7</span> <strong>4. Insights Derived from Data Analysis</strong></a></li>
   <li><a href="#discussion-of-data-quality-and-limitations" id="toc-discussion-of-data-quality-and-limitations" class="nav-link" data-scroll-target="#discussion-of-data-quality-and-limitations"><span class="header-section-number">8</span> <strong>5. Discussion of Data Quality and Limitations</strong></a></li>
   <li><a href="#conclusions-and-implications-for-future-research" id="toc-conclusions-and-implications-for-future-research" class="nav-link" data-scroll-target="#conclusions-and-implications-for-future-research"><span class="header-section-number">9</span> <strong>6. Conclusions and Implications for Future Research</strong></a></li>
-  <li><a href="#week-after-fall-break" id="toc-week-after-fall-break" class="nav-link" data-scroll-target="#week-after-fall-break"><span class="header-section-number">10</span> Week after fall break</a></li>
+  <li><a href="#week-after-fall-break" id="toc-week-after-fall-break" class="nav-link" data-scroll-target="#week-after-fall-break"><span class="header-section-number">10</span> Week after fall break</a>
+  <ul class="collapse">
+  <li><a href="#second-semester-schedule" id="toc-second-semester-schedule" class="nav-link" data-scroll-target="#second-semester-schedule"><span class="header-section-number">10.1</span> Second semester schedule</a></li>
+  <li><a href="#oct-28th" id="toc-oct-28th" class="nav-link" data-scroll-target="#oct-28th"><span class="header-section-number">10.2</span> Oct 28th</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -617,12 +639,108 @@ max    168.000000  334.000000   20.700000   97.000000    9.000000   31.000000</c
 </section>
 <section id="week-after-fall-break" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> Week after fall break</h1>
+<section id="second-semester-schedule" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="second-semester-schedule"><span class="header-section-number">10.1</span> Second semester schedule</h2>
+<p>All charts made in r studio or shiny and 1-3 sentence summary with each visualization</p>
+<p>Nov 2: create a box plot comparing educational attainment and median usual weekly earnings</p>
+<p>Nov 9: create a bar chart comparing educational attainment and unemployment rate</p>
+<p>Nov 16: create a scatter plot comparing median usual weekly earnings and unemployment rate</p>
+<p>Nov 23: create a heatmap comparing total fatal injuries and industry</p>
+<p>Nov 30: create a dot plot comparing fatal injury causes and industry</p>
 <p>(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)</p>
 <p>https://www.bls.gov/emp/tables/unemployment-earnings-education.htm</p>
 <p>In 2023, data from the Bureau of Labor Statistics highlights a strong link between educational attainment, earnings, and unemployment rates. Individuals with higher levels of education tend to earn more and face lower unemployment. Those with advanced degrees, such as doctoral or professional degrees, have the highest median weekly earnings, over $2,100, and the lowest unemployment rates, under 2%. Master’s degree holders also enjoy relatively high earnings of $1,737 per week, with a low 2.0% unemployment rate. Bachelor’s degree holders earn $1,493 weekly with a 2.2% unemployment rate.</p>
 <p>As educational attainment decreases, so do earnings, while unemployment rates rise. Individuals with an associate’s degree earn $1,058 per week with a 2.7% unemployment rate, while those with some college but no degree earn $992 weekly with a 3.3% unemployment rate. High school graduates see further declines, earning $899 per week with a 3.9% unemployment rate. Those with less than a high school diploma face the greatest challenges, with the lowest median earnings of $708 per week and the highest unemployment rate of 5.6%. Overall, education plays a key role in determining both income potential and job stability.</p>
+</section>
+<section id="oct-28th" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="oct-28th"><span class="header-section-number">10.2</span> Oct 28th</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggplot2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'plotly'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:ggplot2':
+
+    last_plot</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:stats':
+
+    filter</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:graphics':
+
+    layout</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the dataset</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"education.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>, <span class="at">na.strings =</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"NA"</span>))</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure relevant columns are numeric and clean them</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span><span class="st">`</span><span class="at">Unemployment.rate....</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">""</span>, <span class="fu">as.character</span>(data<span class="sc">$</span><span class="st">`</span><span class="at">Unemployment.rate....</span><span class="st">`</span>)))</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Check for NAs after conversion</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>na_count <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(data<span class="sc">$</span><span class="st">`</span><span class="at">Unemployment.rate....</span><span class="st">`</span>))</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (na_count <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"Number of NA values in unemployment rate:"</span>, na_count, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of NA values in unemployment rate: 1 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter out rows where unemployment rate is NA</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>filtered_data <span class="ot">&lt;-</span> data[<span class="sc">!</span><span class="fu">is.na</span>(data<span class="sc">$</span><span class="st">`</span><span class="at">Unemployment.rate....</span><span class="st">`</span>), ]</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort the data by unemployment rate from lowest to highest</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>filtered_data <span class="ot">&lt;-</span> filtered_data[<span class="fu">order</span>(filtered_data<span class="sc">$</span><span class="st">`</span><span class="at">Unemployment.rate....</span><span class="st">`</span>), ]</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the filtered data is empty</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(filtered_data) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stop</span>(<span class="st">"Filtered data is empty. Please check the dataset for valid unemployment rate values."</span>)</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the scatter plot using Plotly</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> <span class="fu">plot_ly</span>(</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> filtered_data,</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Educational.attainment</span><span class="st">`</span>,</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Unemployment.rate....</span><span class="st">`</span>,</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">'scatter'</span>,</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode =</span> <span class="st">'markers'</span>,</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">marker =</span> <span class="fu">list</span>(</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Unemployment.rate....</span><span class="st">`</span>,  <span class="co"># Color based on unemployment rate</span></span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">colorscale =</span> <span class="st">'Reds'</span>,               <span class="co"># Color scale</span></span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">showscale =</span> <span class="cn">TRUE</span>,                  <span class="co"># Show color scale</span></span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">10</span>                          <span class="co"># Size of the points</span></span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(</span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Scatter Plot of Educational Attainment vs. Unemployment Rate"</span>,</span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Educational Attainment"</span>),</span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Unemployment Rate (%)"</span>),</span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">showlegend =</span> <span class="cn">FALSE</span></span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-24443427eae5449cf1ed" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-24443427eae5449cf1ed">{"x":{"visdat":{"add461822a21":["function () ","plotlyVisDat"]},"cur_data":"add461822a21","attrs":{"add461822a21":{"x":{},"y":{},"mode":"markers","marker":{"color":{},"colorscale":"Reds","showscale":true,"size":10},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Scatter Plot of Educational Attainment vs. Unemployment Rate","xaxis":{"domain":[0,1],"automargin":true,"title":"Educational Attainment","type":"category","categoryorder":"array","categoryarray":["Associate's degree","Bachelor's degree","Doctoral degree","High school diploma","Less than a high school diploma","Master's degree","Professional degree","Some college, no degree"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Unemployment Rate (%)"},"showlegend":false,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Professional degree","Doctoral degree","Master's degree","Bachelor's degree","Associate's degree","Some college, no degree","High school diploma","Less than a high school diploma"],"y":[12,16,20,22,27,33,39,56],"mode":"markers","marker":{"color":[12,16,20,22,27,33,39,56],"colorscale":"Reds","showscale":true,"size":10,"line":{"color":"rgba(31,119,180,1)"}},"type":"scatter","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>The scatter plot illustrates the relationship between educational attainment and unemployment rates, showcasing how higher levels of education are generally associated with lower unemployment. Each point represents a specific educational category, with color intensity reflecting the unemployment rate—darker shades indicating higher rates. This visual, sourced from the Bureau of Labor Statistics (BLS), emphasizes the importance of education in influencing job market outcomes, highlighting that individuals with higher educational qualifications tend to experience greater job stability.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

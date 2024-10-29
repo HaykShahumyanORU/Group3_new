@@ -204,6 +204,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#visualizing-the-dataset" id="toc-visualizing-the-dataset" class="nav-link" data-scroll-target="#visualizing-the-dataset"><span class="header-section-number">1.7</span> 5. visualizing the dataset</a></li>
   <li><a href="#week-5" id="toc-week-5" class="nav-link" data-scroll-target="#week-5"><span class="header-section-number">1.8</span> Week 5</a></li>
   <li><a href="#week-after-fall-break" id="toc-week-after-fall-break" class="nav-link" data-scroll-target="#week-after-fall-break"><span class="header-section-number">1.9</span> Week after fall break</a></li>
+  <li><a href="#second-semester-schedule" id="toc-second-semester-schedule" class="nav-link" data-scroll-target="#second-semester-schedule"><span class="header-section-number">1.10</span> Second semester schedule</a></li>
+  <li><a href="#oct-28th" id="toc-oct-28th" class="nav-link" data-scroll-target="#oct-28th"><span class="header-section-number">1.11</span> oct 28th</a></li>
   </ul>
 </nav>
     </div>
@@ -424,6 +426,15 @@ max    168.000000  334.000000   20.700000   97.000000    9.000000   31.000000</c
 </section>
 <section id="week-after-fall-break" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="week-after-fall-break"><span class="header-section-number">1.9</span> Week after fall break</h2>
+</section>
+<section id="second-semester-schedule" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="second-semester-schedule"><span class="header-section-number">1.10</span> Second semester schedule</h2>
+<p>All charts made in r studio or shiny and 1-3 sentence summary with each visualization</p>
+<p>Nov 2: create a dual-line chart comparing number of work stoppages beginning and number of work stoppages in effect</p>
+<p>Nov 9: create a stacked area chart comparing workers involved beginning and workers involved in effect</p>
+<p>Nov 16: create a scatter plot comparing days of idleness and percent total working time</p>
+<p>Nov 23: create a bubble chart comparing number of work stoppages beginning, workers involved beginning and days of idleness</p>
+<p>Nov 30: create a 3D scatter plot comparing the number of work stoppages in effect, workers involved in effect, and percent total working time</p>
 <p>(For this weeks assignment, everyone needed to find a dataset from our datasource and give a summary about it.)</p>
 <p>https://www.bls.gov/wsp/overview.htm</p>
 <p>The data provides a historical record of annual work stoppages in the U.S. involving 1,000 or more workers, starting from 1947. It includes the following key information:</p>
@@ -436,6 +447,44 @@ The percentage of total working time lost due to these stoppages.</code></pre>
 <p>direct summary from the website:</p>
 <p>The Bureau of Labor Statistics has two types of data about work stoppages: Work Stoppages program data and the Strike Report.</p>
 <p>The Work Stoppages program provides monthly and annual data of major work stoppages involving 1,000 or more workers lasting one full shift or longer. The monthly and annual data show the establishment and union(s) involved in the work stoppage along with the location, the number of workers and the days of idleness. The monthly data list all work stoppages involving 1,000 or more workers that occurred during the full calendar month for each month of the year. The annualized data provide statistics, analysis and details of each work stoppage of 1,000 or more workers that occurred during the year. The work stoppages data are gathered from public news sources, such as newspapers and the Internet. The BLS does not distinguish between strikes and lock-outs in the data; both are included in the term “work stoppages”.</p>
+</section>
+<section id="oct-28th" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="oct-28th"><span class="header-section-number">1.11</span> oct 28th</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>data4 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"cleaned_annual_listing.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Sheet1"</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure Year column is numeric and remove NA values</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>data4<span class="sc">$</span>Year <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data4<span class="sc">$</span>Year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: NAs introduced by coercion</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data4 <span class="ot">&lt;-</span> data4[<span class="sc">!</span><span class="fu">is.na</span>(data4<span class="sc">$</span>Year), ]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dual-line chart with adjusted x-axis labels</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data4, <span class="fu">aes</span>(<span class="at">x =</span> Year)) <span class="sc">+</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> Number_of_Work_Stoppages_Beginning, <span class="at">color =</span> <span class="st">"Work Stoppages Beginning"</span>, <span class="at">group =</span> <span class="dv">1</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> Number_of_Work_Stoppages_In_Effect, <span class="at">color =</span> <span class="st">"Work Stoppages In Effect"</span>, <span class="at">group =</span> <span class="dv">1</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comparison of Work Stoppages Beginning and In Effect Over the Years"</span>,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of Work Stoppages"</span>,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Legend"</span>) <span class="sc">+</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">min</span>(data4<span class="sc">$</span>Year, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="fu">max</span>(data4<span class="sc">$</span>Year, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">by =</span> <span class="dv">5</span>)) <span class="sc">+</span> <span class="co"># Show every 5th year</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="co"># Rotate x-axis labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Hayk_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The graph shows a clear decline in the number of work stoppages that both began and were in effect over the years, especially prominent from the mid-20th century onward. The “Work Stoppages Beginning” generally tracked slightly above “Work Stoppages In Effect,” but both followed a similar downward trend. This decline may indicate changes in labor practices, regulations, or economic conditions affecting work stoppages over time.</p>
 
 
 </section>
