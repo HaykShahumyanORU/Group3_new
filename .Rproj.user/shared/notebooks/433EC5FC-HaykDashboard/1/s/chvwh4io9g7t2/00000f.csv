@@ -1,0 +1,9 @@
+"0","# Load necessary library"
+"0","library(readxl)"
+"0","library(ggplot2)"
+"0",""
+"0","# Read the data from the Excel file"
+"0","file_path <- ""cleaned_annual_listing.xlsx"""
+"0","data <- read_excel(file_path, sheet = ""Sheet1"")"
+"2","Error: `path` does not exist: ‘cleaned_annual_listing.xlsx’
+"

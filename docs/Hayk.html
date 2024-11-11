@@ -206,6 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#week-after-fall-break" id="toc-week-after-fall-break" class="nav-link" data-scroll-target="#week-after-fall-break"><span class="header-section-number">1.9</span> Week after fall break</a></li>
   <li><a href="#second-semester-schedule" id="toc-second-semester-schedule" class="nav-link" data-scroll-target="#second-semester-schedule"><span class="header-section-number">1.10</span> Second semester schedule</a></li>
   <li><a href="#oct-28th" id="toc-oct-28th" class="nav-link" data-scroll-target="#oct-28th"><span class="header-section-number">1.11</span> oct 28th</a></li>
+  <li><a href="#nov-16th" id="toc-nov-16th" class="nav-link" data-scroll-target="#nov-16th"><span class="header-section-number">1.12</span> nov 16th</a></li>
   </ul>
 </nav>
     </div>
@@ -485,6 +486,82 @@ The percentage of total working time lost due to these stoppages.</code></pre>
 </div>
 </div>
 <p>The graph shows a clear decline in the number of work stoppages that both began and were in effect over the years, especially prominent from the mid-20th century onward. The “Work Stoppages Beginning” generally tracked slightly above “Work Stoppages In Effect,” but both followed a similar downward trend. This decline may indicate changes in labor practices, regulations, or economic conditions affecting work stoppages over time.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace with your data loading path if needed</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"cleaned_annual_listing.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Sheet1"</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean and select necessary columns</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data[<span class="dv">3</span><span class="sc">:</span><span class="fu">nrow</span>(data), <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>)]  <span class="co"># Adjust to skip header rows and select Year, Workers_Beginning, Workers_Effect</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Year"</span>, <span class="st">"Workers_Beginning"</span>, <span class="st">"Workers_Effect"</span>)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert columns to appropriate types</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">D"</span>, <span class="st">""</span>, data<span class="sc">$</span>Year))</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Workers_Beginning <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">""</span>, data<span class="sc">$</span>Workers_Beginning))</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Workers_Effect <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">""</span>, data<span class="sc">$</span>Workers_Effect))</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape data for ggplot</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>data_long <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(data, <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"Workers_Beginning"</span>, <span class="st">"Workers_Effect"</span>), <span class="at">names_to =</span> <span class="st">"Status"</span>, <span class="at">values_to =</span> <span class="st">"Workers"</span>)</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the stacked area chart</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_long, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Workers, <span class="at">fill =</span> Status)) <span class="sc">+</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comparison of Workers Involved at Beginning vs. In Effect"</span>, </span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Year"</span>, </span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of Workers (in thousands)"</span>) <span class="sc">+</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Workers_Beginning"</span> <span class="ot">=</span> <span class="st">"blue"</span>, <span class="st">"Workers_Effect"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 42 rows containing non-finite outside the scale range
+(`stat_align()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Hayk_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This chart compares the number of workers involved in work stoppages at the beginning of the period (blue) versus those who remained involved (green) across several years. The high blue peaks show that a large number of workers were initially involved in stoppages, but the much smaller green areas indicate that far fewer workers were still involved as stoppages continued. This suggests a pattern where many workers initially participate in stoppages, but the number decreases over time.</p>
+</section>
+<section id="nov-16th" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="nov-16th"><span class="header-section-number">1.12</span> nov 16th</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the data from the Excel file</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"cleaned_annual_listing.xlsx"</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Sheet1"</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatter plot</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Days_of_Idleness</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Percent_Total_Working_Time</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Scatter Plot of Days of Idleness vs. Percent Total Working Time"</span>,</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Days of Idleness"</span>,</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percent Total Working Time"</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 20 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Hayk_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The scatter plot visualizes the relationship between “Days of Idleness” and “Percent Total Working Time.” Each point represents a year, with its position showing the level of work stoppage (days of idleness) and its impact on the overall working time percentage. If there is a positive trend (points forming an upward slope), it indicates that higher days of idleness are associated with a greater percentage impact on total working time, suggesting a correlation between increased stoppages and reduced productivity.</p>
 
 
 </section>

@@ -1,0 +1,180 @@
+---
+title: "Viz: Quarto Static DashBoard"
+author: "Pratiti Navam"
+format: dashboard
+---
+
+# Page 1
+
+
+```{r}
+# Load necessary libraries
+library(plotly)
+library(ggplot2)
+
+# Import the dataset
+data <- read.csv("education.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = c("", "NA"))
+
+# Convert unemployment rate to numeric and handle commas
+data$Unemployment_rate <- as.numeric(gsub(",", "", data$Unemployment.rate....))
+
+# Check for NA values after conversion and display a message if any
+na_count <- sum(is.na(data$Unemployment_rate))
+if (na_count > 0) {
+  message("Number of NA values in unemployment rate: ", na_count)
+}
+
+# Filter out rows where unemployment rate is NA
+filtered_data <- subset(data, !is.na(Unemployment_rate))
+
+# Sort data by unemployment rate from least to greatest
+filtered_data <- filtered_data[order(filtered_data$Unemployment_rate), ]
+
+# Reorder 'Educational.attainment' levels based on unemployment rate
+filtered_data$Educational.attainment <- factor(filtered_data$Educational.attainment, levels = unique(filtered_data$Educational.attainment))
+
+# Stop execution if filtered data is empty
+if (nrow(filtered_data) == 0) {
+  stop("Filtered data is empty. Please check the dataset for valid unemployment rate values.")
+}
+
+# Create the scatter plot using Plotly
+fig <- plot_ly(
+  data = filtered_data,
+  x = ~Educational.attainment,
+  y = ~Unemployment_rate,
+  type = 'scatter',
+  mode = 'markers',
+  marker = list(
+    color = ~Unemployment_rate,  # Color based on unemployment rate
+    colorscale = 'Reds',         # Color scale
+    showscale = TRUE,            # Show color scale
+    size = 10                    # Size of the points
+  )
+) %>%
+  layout(
+    title = "Scatter Plot of Educational Attainment vs. Unemployment Rate",
+    xaxis = list(title = "Educational Attainment", categoryorder = "array", categoryarray = ~Educational.attainment),
+    yaxis = list(title = "Unemployment Rate (%)"),
+    showlegend = FALSE
+  )
+
+fig
+```
+The scatter plot illustrates the relationship between educational attainment and unemployment rates, showcasing how higher levels of education are generally associated with lower unemployment. Each point represents a specific educational category, with color intensity reflecting the unemployment rate—darker shades indicating higher rates. This visual, sourced from the Bureau of Labor Statistics (BLS), emphasizes the importance of education in influencing job market outcomes, highlighting that individuals with higher educational qualifications tend to experience greater job stability.
+
+
+# Page 2
+
+## Row
+
+
+```{r}
+
+# Load necessary libraries
+library(DT)  # For displaying tables
+
+# Import the dataset
+data <- read.csv("education.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Select only the relevant columns
+selected_data <- data[, c("Educational.attainment", "Median.usual.weekly.earnings....")]
+
+# Rename the columns
+colnames(selected_data) <- c("Educational Attainment", "Median Weekly Earnings ($)")
+
+# Convert Median Weekly Earnings to numeric and remove NAs
+selected_data$`Median Weekly Earnings ($)` <- as.numeric(gsub(",", "", selected_data$`Median Weekly Earnings ($)`))
+
+# Remove rows with NA values in Median Weekly Earnings
+selected_data <- selected_data[!is.na(selected_data$`Median Weekly Earnings ($)`), ]
+
+# Display the table with only the selected columns
+datatable(selected_data, options = list(pageLength = 10), 
+          rownames = FALSE, 
+          caption = "Table of Educational Attainment and Median Weekly Earnings")
+
+```
+## Column
+
+
+```{r}
+# Import the dataset
+data <- read.csv("education.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Convert Median Weekly Earnings to numeric (remove commas if needed)
+data$Median_weekly_earnings <- as.numeric(gsub(",", "", data$Median.usual.weekly.earnings....))
+
+# Create a simple box plot for Median Weekly Earnings
+boxplot(
+  data$Median_weekly_earnings,
+  main = "Box Plot of Median Weekly Earnings",
+  ylab = "Median Weekly Earnings ($)",
+  col = "lightblue",
+  border = "darkblue",
+  xaxs = "i"  # Adjust x-axis to be tighter
+)
+
+# Calculate median and quartiles
+median_value <- median(data$Median_weekly_earnings, na.rm = TRUE)
+q1_value <- quantile(data$Median_weekly_earnings, 0.25, na.rm = TRUE)
+q3_value <- quantile(data$Median_weekly_earnings, 0.75, na.rm = TRUE)
+
+# Add labels for median and quartiles with darker colors
+text(x = 1, y = median_value, labels = paste("Median: $", format(median_value, big.mark = ",")), pos = 3, col = "darkblue")
+text(x = 1, y = q1_value, labels = paste("25th Percentile: $", format(q1_value, big.mark = ",")), pos = 3, col = "darkgreen")
+text(x = 1, y = q3_value + 100, labels = paste("75th Percentile: $", format(q3_value, big.mark = ",")), pos = 3, col = "darkred") 
+
+```
+The dataset represents Median Weekly Earnings categorized by various levels of educational attainment. The box plot visualizes that the median weekly earnings are approximately 1,000, with the 25th percentile around 800 and the 75th percentile at approximately 1,200, indicating that 50% of the data falls within this range. This visualization highlights a notable disparity in earnings, suggesting that individuals with higher educational attainment generally earn significantly more, thereby emphasizing the economic value of education.
+
+
+
+```{r}
+
+```
+
+# Page 3
+
+## Row
+Nov. 9
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+
+# Import the dataset
+data <- read.csv("education.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Select only the relevant columns
+selected_data <- data[, c("Educational.attainment", "Unemployment.rate....")]
+
+# Rename columns for readability
+colnames(selected_data) <- c("Educational Attainment", "Unemployment Rate (%)")
+
+# Convert Unemployment Rate to numeric (remove commas if needed)
+selected_data$`Unemployment Rate (%)` <- as.numeric(gsub(",", "", selected_data$`Unemployment Rate (%)`))
+
+# Create a bar chart with gradient colors and no legend
+ggplot(selected_data, aes(x = reorder(`Educational Attainment`, `Unemployment Rate (%)`), y = `Unemployment Rate (%)`, fill = `Unemployment Rate (%)`)) +
+  geom_bar(stat = "identity") +
+  scale_fill_gradient(low = "lightblue", high = "darkblue") +  # Gradient color from light to dark blue
+  labs(
+    title = "Unemployment Rate by Educational Attainment",
+    x = "Educational Attainment",
+    y = "Unemployment Rate (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels for readability
+    legend.position = "none"  # Remove the legend
+  )
+
+
+```
+
+## Row
+
+# Summary
+
+# References

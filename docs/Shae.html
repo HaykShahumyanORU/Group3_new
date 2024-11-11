@@ -204,6 +204,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#data-clean-and-prepartion" id="toc-data-clean-and-prepartion" class="nav-link" data-scroll-target="#data-clean-and-prepartion"><span class="header-section-number">4.13</span> Data Clean and Prepartion</a></li>
   <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">4.14</span> Visualization</a></li>
   <li><a href="#summary-of-visualization" id="toc-summary-of-visualization" class="nav-link" data-scroll-target="#summary-of-visualization"><span class="header-section-number">4.15</span> Summary of Visualization</a></li>
+  <li><a href="#nov-16th" id="toc-nov-16th" class="nav-link" data-scroll-target="#nov-16th"><span class="header-section-number">4.16</span> nov 16th</a></li>
+  <li><a href="#introduction-2" id="toc-introduction-2" class="nav-link" data-scroll-target="#introduction-2"><span class="header-section-number">5</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#data-library-load-2" id="toc-data-library-load-2" class="nav-link" data-scroll-target="#data-library-load-2"><span class="header-section-number">5.1</span> Data &amp;Library Load</a></li>
+  <li><a href="#data-clean-and-prepartion-1" id="toc-data-clean-and-prepartion-1" class="nav-link" data-scroll-target="#data-clean-and-prepartion-1"><span class="header-section-number">5.2</span> Data Clean and Prepartion</a></li>
+  <li><a href="#visualization-1" id="toc-visualization-1" class="nav-link" data-scroll-target="#visualization-1"><span class="header-section-number">5.3</span> Visualization</a></li>
+  <li><a href="#summary-of-visualization-1" id="toc-summary-of-visualization-1" class="nav-link" data-scroll-target="#summary-of-visualization-1"><span class="header-section-number">5.4</span> Summary of Visualization</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -537,8 +545,78 @@ Attaching package: 'dplyr'</code></pre>
 <h2 data-number="4.15" class="anchored" data-anchor-id="summary-of-visualization"><span class="header-section-number">4.15</span> Summary of Visualization</h2>
 <p>This line chart illustrates the relationship between the percentage of employed individuals and the unemployment rate over time. Specifically, it compares the Employed Percentage (representing the proportion of the civilian labor force that is employed) against the Unemployed Percentage (indicating the proportion of the labor force that is unemployed).</p>
 <p>Key Points: Trends Over Time: The chart shows how both employment and unemployment rates have evolved from the data’s starting year to the present. Inverse Relationship: Generally, as the percentage of employed individuals increases, the unemployment rate tends to decrease, indicating an inverse relationship between these two metrics. Economic Insights: The visualization provides insights into economic conditions and labor market dynamics, highlighting periods of growth and recession based on employment trends.</p>
+</section>
+<section id="nov-16th" class="level2" data-number="4.16">
+<h2 data-number="4.16" class="anchored" data-anchor-id="nov-16th"><span class="header-section-number">4.16</span> nov 16th</h2>
+</section>
+<section id="introduction-2" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Introduction</h1>
+<p>This document presents a visualization comparing the percentage of employed individuals and the unemployment rate over time. The analysis uses historical data on employment and unemployment metrics to provide insights into labor market dynamics.</p>
+<section id="data-library-load-2" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="data-library-load-2"><span class="header-section-number">5.1</span> Data &amp;Library Load</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)  <span class="co"># If you're reading CSV or similar formats</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"LineGraph.xlsx"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-clean-and-prepartion-1" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="data-clean-and-prepartion-1"><span class="header-section-number">5.2</span> Data Clean and Prepartion</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>data_clean <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Year, <span class="st">`</span><span class="at">Total</span><span class="st">`</span>, <span class="st">`</span><span class="at">Unemployed Percent</span><span class="sc">\r\n</span><span class="at">of</span><span class="sc">\r\n</span><span class="at">labor</span><span class="sc">\r\n</span><span class="at">force</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Employed_Total =</span> <span class="st">`</span><span class="at">Total</span><span class="st">`</span>,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Unemployed_Percent =</span> <span class="st">`</span><span class="at">Unemployed Percent</span><span class="sc">\r\n</span><span class="at">of</span><span class="sc">\r\n</span><span class="at">labor</span><span class="sc">\r\n</span><span class="at">force</span><span class="st">`</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Employed_Total =</span> <span class="fu">as.numeric</span>(Employed_Total),</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Unemployed_Percent =</span> <span class="fu">as.numeric</span>(Unemployed_Percent)</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualization-1" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="visualization-1"><span class="header-section-number">5.3</span> Visualization</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_clean, <span class="fu">aes</span>(<span class="at">x =</span> Employed_Total, <span class="at">y =</span> Unemployed_Percent)) <span class="sc">+</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span>  <span class="co"># Change line color</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Unemployed vs. Employed"</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Employed"</span>,  <span class="co"># Updated x-axis title</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Unemployed"</span>  <span class="co"># Updated y-axis title</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span>  <span class="co"># Increase base font size</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">color =</span> <span class="st">"black"</span>),  <span class="co"># Center title, change font size and color</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">color =</span> <span class="st">"#0072B2"</span>),  <span class="co"># X-axis title</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">color =</span> <span class="st">"#0072B2"</span>),  <span class="co"># Y-axis title</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>)  <span class="co"># Axis text size</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_line()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Shae_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-of-visualization-1" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="summary-of-visualization-1"><span class="header-section-number">5.4</span> Summary of Visualization</h2>
+<p>This line chart illustrates the relationship between the percentage of employed individuals and the unemployment rate over time. Specifically, it compares the Employed Percentage (representing the proportion of the civilian labor force that is employed) against the Unemployed Percentage (indicating the proportion of the labor force that is unemployed).</p>
+<p>Key Points: Trends Over Time: The chart shows how both employment and unemployment rates have evolved from the data’s starting year to the present. Inverse Relationship: Generally, as the percentage of employed individuals increases, the unemployment rate tends to decrease, indicating an inverse relationship between these two metrics. Economic Insights: The visualization provides insights into economic conditions and labor market dynamics, highlighting periods of growth and recession based on employment trends.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -124,7 +124,17 @@
     "href": "Hayk.html#oct-28th",
     "title": "1  Hayk",
     "section": "1.11 oct 28th",
-    "text": "1.11 oct 28th\n\n# Load necessary libraries\nlibrary(ggplot2)\nlibrary(readxl)\n\n# Load the dataset\ndata4 &lt;- read_excel(\"cleaned_annual_listing.xlsx\", sheet = \"Sheet1\")\n\n# Ensure Year column is numeric and remove NA values\ndata4$Year &lt;- as.numeric(data4$Year)\n\nWarning: NAs introduced by coercion\n\ndata4 &lt;- data4[!is.na(data4$Year), ]\n\n# Create a dual-line chart with adjusted x-axis labels\nggplot(data4, aes(x = Year)) +\n  geom_line(aes(y = Number_of_Work_Stoppages_Beginning, color = \"Work Stoppages Beginning\", group = 1), na.rm = TRUE) +\n  geom_line(aes(y = Number_of_Work_Stoppages_In_Effect, color = \"Work Stoppages In Effect\", group = 1), na.rm = TRUE) +\n  labs(title = \"Comparison of Work Stoppages Beginning and In Effect Over the Years\",\n       x = \"Year\",\n       y = \"Number of Work Stoppages\",\n       color = \"Legend\") +\n  theme_minimal() +\n  scale_x_continuous(breaks = seq(min(data4$Year, na.rm = TRUE), max(data4$Year, na.rm = TRUE), by = 5)) + # Show every 5th year\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels\n\n\n\n\n\n\n\n\nThe graph shows a clear decline in the number of work stoppages that both began and were in effect over the years, especially prominent from the mid-20th century onward. The “Work Stoppages Beginning” generally tracked slightly above “Work Stoppages In Effect,” but both followed a similar downward trend. This decline may indicate changes in labor practices, regulations, or economic conditions affecting work stoppages over time.",
+    "text": "1.11 oct 28th\n\n# Load necessary libraries\nlibrary(ggplot2)\nlibrary(readxl)\n\n# Load the dataset\ndata4 &lt;- read_excel(\"cleaned_annual_listing.xlsx\", sheet = \"Sheet1\")\n\n# Ensure Year column is numeric and remove NA values\ndata4$Year &lt;- as.numeric(data4$Year)\n\nWarning: NAs introduced by coercion\n\ndata4 &lt;- data4[!is.na(data4$Year), ]\n\n# Create a dual-line chart with adjusted x-axis labels\nggplot(data4, aes(x = Year)) +\n  geom_line(aes(y = Number_of_Work_Stoppages_Beginning, color = \"Work Stoppages Beginning\", group = 1), na.rm = TRUE) +\n  geom_line(aes(y = Number_of_Work_Stoppages_In_Effect, color = \"Work Stoppages In Effect\", group = 1), na.rm = TRUE) +\n  labs(title = \"Comparison of Work Stoppages Beginning and In Effect Over the Years\",\n       x = \"Year\",\n       y = \"Number of Work Stoppages\",\n       color = \"Legend\") +\n  theme_minimal() +\n  scale_x_continuous(breaks = seq(min(data4$Year, na.rm = TRUE), max(data4$Year, na.rm = TRUE), by = 5)) + # Show every 5th year\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels\n\n\n\n\n\n\n\n\nThe graph shows a clear decline in the number of work stoppages that both began and were in effect over the years, especially prominent from the mid-20th century onward. The “Work Stoppages Beginning” generally tracked slightly above “Work Stoppages In Effect,” but both followed a similar downward trend. This decline may indicate changes in labor practices, regulations, or economic conditions affecting work stoppages over time.\n\n# Load necessary libraries\nlibrary(ggplot2)\nlibrary(readxl)\nlibrary(tidyr)\n\n# Replace with your data loading path if needed\ndata &lt;- read_excel(\"cleaned_annual_listing.xlsx\", sheet = \"Sheet1\")\n\n# Clean and select necessary columns\ndata &lt;- data[3:nrow(data), c(1, 4, 5)]  # Adjust to skip header rows and select Year, Workers_Beginning, Workers_Effect\ncolnames(data) &lt;- c(\"Year\", \"Workers_Beginning\", \"Workers_Effect\")\n\n# Convert columns to appropriate types\ndata$Year &lt;- as.integer(gsub(\"\\\\D\", \"\", data$Year))\ndata$Workers_Beginning &lt;- as.numeric(gsub(\",\", \"\", data$Workers_Beginning))\ndata$Workers_Effect &lt;- as.numeric(gsub(\",\", \"\", data$Workers_Effect))\n\n# Reshape data for ggplot\ndata_long &lt;- pivot_longer(data, cols = c(\"Workers_Beginning\", \"Workers_Effect\"), names_to = \"Status\", values_to = \"Workers\")\n\n# Plot the stacked area chart\nggplot(data_long, aes(x = Year, y = Workers, fill = Status)) +\n  geom_area(alpha = 0.6) +\n  labs(title = \"Comparison of Workers Involved at Beginning vs. In Effect\", \n       x = \"Year\", \n       y = \"Number of Workers (in thousands)\") +\n  scale_fill_manual(values = c(\"Workers_Beginning\" = \"blue\", \"Workers_Effect\" = \"green\")) +\n  theme_minimal()\n\nWarning: Removed 42 rows containing non-finite outside the scale range\n(`stat_align()`).\n\n\n\n\n\n\n\n\n\nThis chart compares the number of workers involved in work stoppages at the beginning of the period (blue) versus those who remained involved (green) across several years. The high blue peaks show that a large number of workers were initially involved in stoppages, but the much smaller green areas indicate that far fewer workers were still involved as stoppages continued. This suggests a pattern where many workers initially participate in stoppages, but the number decreases over time.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
+    ]
+  },
+  {
+    "objectID": "Hayk.html#nov-16th",
+    "href": "Hayk.html#nov-16th",
+    "title": "1  Hayk",
+    "section": "1.12 nov 16th",
+    "text": "1.12 nov 16th\n\n# Load necessary library\nlibrary(readxl)\nlibrary(ggplot2)\n\n# Read the data from the Excel file\nfile_path &lt;- \"cleaned_annual_listing.xlsx\"\ndata &lt;- read_excel(file_path, sheet = \"Sheet1\")\n\n# Create a scatter plot\nggplot(data, aes(x = `Days_of_Idleness`, y = `Percent_Total_Working_Time`)) +\n  geom_point() +\n  labs(\n    title = \"Scatter Plot of Days of Idleness vs. Percent Total Working Time\",\n    x = \"Days of Idleness\",\n    y = \"Percent Total Working Time\"\n  ) +\n  theme_minimal()\n\nWarning: Removed 20 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\nThe scatter plot visualizes the relationship between “Days of Idleness” and “Percent Total Working Time.” Each point represents a year, with its position showing the level of work stoppage (days of idleness) and its impact on the overall working time percentage. If there is a positive trend (points forming an upward slope), it indicates that higher days of idleness are associated with a greater percentage impact on total working time, suggesting a correlation between increased stoppages and reduced productivity.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Hayk</span>"
     ]
@@ -255,6 +265,16 @@
     "title": "2  Pratiti",
     "section": "10.2 Oct 28th",
     "text": "10.2 Oct 28th\n\nlibrary(plotly)\n\nLoading required package: ggplot2\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nlibrary(ggplot2)\n\n\n# Load necessary libraries\nlibrary(plotly)\n\n# Import the dataset\ndata &lt;- read.csv(\"education.csv\", header = TRUE, stringsAsFactors = FALSE, na.strings = c(\"\", \"NA\"))\n\n# Ensure relevant columns are numeric and clean them\ndata$`Unemployment.rate....` &lt;- as.numeric(gsub(\",\", \"\", as.character(data$`Unemployment.rate....`)))\n\n# Check for NAs after conversion\nna_count &lt;- sum(is.na(data$`Unemployment.rate....`))\nif (na_count &gt; 0) {\n  cat(\"Number of NA values in unemployment rate:\", na_count, \"\\n\")\n}\n\nNumber of NA values in unemployment rate: 1 \n\n# Filter out rows where unemployment rate is NA\nfiltered_data &lt;- data[!is.na(data$`Unemployment.rate....`), ]\n\n# Sort the data by unemployment rate from lowest to highest\nfiltered_data &lt;- filtered_data[order(filtered_data$`Unemployment.rate....`), ]\n\n# Check if the filtered data is empty\nif (nrow(filtered_data) == 0) {\n  stop(\"Filtered data is empty. Please check the dataset for valid unemployment rate values.\")\n}\n\n# Create the scatter plot using Plotly\nfig &lt;- plot_ly(\n  data = filtered_data,\n  x = ~`Educational.attainment`,\n  y = ~`Unemployment.rate....`,\n  type = 'scatter',\n  mode = 'markers',\n  marker = list(\n    color = ~`Unemployment.rate....`,  # Color based on unemployment rate\n    colorscale = 'Reds',               # Color scale\n    showscale = TRUE,                  # Show color scale\n    size = 10                          # Size of the points\n  )\n) %&gt;%\n  layout(\n    title = \"Scatter Plot of Educational Attainment vs. Unemployment Rate\",\n    xaxis = list(title = \"Educational Attainment\"),\n    yaxis = list(title = \"Unemployment Rate (%)\"),\n    showlegend = FALSE\n  )\n\n# Show the plot\nfig\n\n\n\n\n\nThe scatter plot illustrates the relationship between educational attainment and unemployment rates, showcasing how higher levels of education are generally associated with lower unemployment. Each point represents a specific educational category, with color intensity reflecting the unemployment rate—darker shades indicating higher rates. This visual, sourced from the Bureau of Labor Statistics (BLS), emphasizes the importance of education in influencing job market outcomes, highlighting that individuals with higher educational qualifications tend to experience greater job stability.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
+    ]
+  },
+  {
+    "objectID": "Pratiti.html#nov-16th",
+    "href": "Pratiti.html#nov-16th",
+    "title": "2  Pratiti",
+    "section": "10.3 nov 16th",
+    "text": "10.3 nov 16th\n\n# Load necessary libraries\nlibrary(ggplot2)\n\n# Import the dataset\ndata &lt;- read.csv(\"education.csv\", header = TRUE, stringsAsFactors = FALSE)\n\n# Select only the relevant columns\nselected_data &lt;- data[, c(\"Educational.attainment\", \"Unemployment.rate....\")]\n\n# Rename columns for readability\ncolnames(selected_data) &lt;- c(\"Educational Attainment\", \"Unemployment Rate (%)\")\n\n# Convert Unemployment Rate to numeric (remove commas if needed)\nselected_data$`Unemployment Rate (%)` &lt;- as.numeric(gsub(\",\", \"\", selected_data$`Unemployment Rate (%)`))\n\n# Create a bar chart with gradient colors and no legend\nggplot(selected_data, aes(x = reorder(`Educational Attainment`, `Unemployment Rate (%)`), y = `Unemployment Rate (%)`, fill = `Unemployment Rate (%)`)) +\n  geom_bar(stat = \"identity\") +\n  scale_fill_gradient(low = \"lightblue\", high = \"darkblue\") +  # Gradient color from light to dark blue\n  labs(\n    title = \"Unemployment Rate by Educational Attainment\",\n    x = \"Educational Attainment\",\n    y = \"Unemployment Rate (%)\"\n  ) +\n  theme_minimal() +\n  theme(\n    axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels for readability\n    legend.position = \"none\"  # Remove the legend\n  )\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_bar()`).",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pratiti</span>"
     ]
@@ -515,6 +535,56 @@
     "title": "4  Shae",
     "section": "4.15 Summary of Visualization",
     "text": "4.15 Summary of Visualization\nThis line chart illustrates the relationship between the percentage of employed individuals and the unemployment rate over time. Specifically, it compares the Employed Percentage (representing the proportion of the civilian labor force that is employed) against the Unemployed Percentage (indicating the proportion of the labor force that is unemployed).\nKey Points: Trends Over Time: The chart shows how both employment and unemployment rates have evolved from the data’s starting year to the present. Inverse Relationship: Generally, as the percentage of employed individuals increases, the unemployment rate tends to decrease, indicating an inverse relationship between these two metrics. Economic Insights: The visualization provides insights into economic conditions and labor market dynamics, highlighting periods of growth and recession based on employment trends.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#nov-16th",
+    "href": "Shae.html#nov-16th",
+    "title": "4  Shae",
+    "section": "4.16 nov 16th",
+    "text": "4.16 nov 16th",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#data-library-load-2",
+    "href": "Shae.html#data-library-load-2",
+    "title": "4  Shae",
+    "section": "5.1 Data &Library Load",
+    "text": "5.1 Data &Library Load\n\nlibrary(dplyr)\nlibrary(readxl)\nlibrary(tidyr)\nlibrary(readr)  # If you're reading CSV or similar formats\nlibrary(ggplot2)\n\n\ndata &lt;- read_excel(\"LineGraph.xlsx\")",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#data-clean-and-prepartion-1",
+    "href": "Shae.html#data-clean-and-prepartion-1",
+    "title": "4  Shae",
+    "section": "5.2 Data Clean and Prepartion",
+    "text": "5.2 Data Clean and Prepartion\n\ndata_clean &lt;- data %&gt;%\n  select(Year, `Total`, `Unemployed Percent\\r\\nof\\r\\nlabor\\r\\nforce`) %&gt;%\n  rename(\n    Employed_Total = `Total`,\n    Unemployed_Percent = `Unemployed Percent\\r\\nof\\r\\nlabor\\r\\nforce`\n  ) %&gt;%\n  mutate(\n    Employed_Total = as.numeric(Employed_Total),\n    Unemployed_Percent = as.numeric(Unemployed_Percent)\n  )",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#visualization-1",
+    "href": "Shae.html#visualization-1",
+    "title": "4  Shae",
+    "section": "5.3 Visualization",
+    "text": "5.3 Visualization\n\nggplot(data_clean, aes(x = Employed_Total, y = Unemployed_Percent)) +\n  geom_line(color = \"darkgreen\", size = 1.2) +  # Change line color\n  labs(\n    title = \"Unemployed vs. Employed\",\n    x = \"Employed\",  # Updated x-axis title\n    y = \"Unemployed\"  # Updated y-axis title\n  ) +\n  theme_minimal(base_size = 15) +  # Increase base font size\n  theme(\n    plot.title = element_text(hjust = 0.5, size = 20, face = \"bold\", color = \"black\"),  # Center title, change font size and color\n    axis.title.x = element_text(size = 16, face = \"bold\", color = \"#0072B2\"),  # X-axis title\n    axis.title.y = element_text(size = 16, face = \"bold\", color = \"#0072B2\"),  # Y-axis title\n    axis.text = element_text(size = 14)  # Axis text size\n  )\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
+    ]
+  },
+  {
+    "objectID": "Shae.html#summary-of-visualization-1",
+    "href": "Shae.html#summary-of-visualization-1",
+    "title": "4  Shae",
+    "section": "5.4 Summary of Visualization",
+    "text": "5.4 Summary of Visualization\nThis line chart illustrates the relationship between the percentage of employed individuals and the unemployment rate over time. Specifically, it compares the Employed Percentage (representing the proportion of the civilian labor force that is employed) against the Unemployed Percentage (indicating the proportion of the labor force that is unemployed).\nKey Points: Trends Over Time: The chart shows how both employment and unemployment rates have evolved from the data’s starting year to the present. Inverse Relationship: Generally, as the percentage of employed individuals increases, the unemployment rate tends to decrease, indicating an inverse relationship between these two metrics. Economic Insights: The visualization provides insights into economic conditions and labor market dynamics, highlighting periods of growth and recession based on employment trends.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Shae</span>"
     ]

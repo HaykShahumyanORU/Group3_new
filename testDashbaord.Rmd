@@ -1,0 +1,94 @@
+---
+title: "Hayk_rsDashboard"
+author: "Hayk"
+format: html_document
+---
+
+# page 1
+
+# column
+https://www.bls.gov/wsp/overview.htm
+
+The data provides a historical record of annual work stoppages in the U.S. involving 1,000 or more workers, starting from 1947. It includes the following key information:
+
+    The year of the work stoppage.
+    The number of work stoppages that began in a given year and those still in effect.
+    The number of workers involved (in thousands).
+    The number of days of idleness (in thousands) caused by these stoppages.
+    The percentage of total working time lost due to these stoppages.
+
+This dataset is focused on capturing the frequency and economic impact of large-scale labor disruptions over time.
+
+direct summary from the website:
+
+The Bureau of Labor Statistics has two types of data about work stoppages: Work Stoppages program data and the Strike Report.
+
+The Work Stoppages program provides monthly and annual data of major work stoppages involving 1,000 or more workers lasting one full shift or longer. The monthly and annual data show the establishment and union(s) involved in the work stoppage along with the location, the number of workers and the days of idleness. The monthly data list all work stoppages involving 1,000 or more workers that occurred during the full calendar month for each month of the year. The annualized data provide statistics, analysis and details of each work stoppage of 1,000 or more workers that occurred during the year. The work stoppages data are gathered from public news sources, such as newspapers and the Internet. The BLS does not distinguish between strikes and lock-outs in the data; both are included in the term "work stoppages".
+
+### column
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(readxl)
+
+# Load the dataset
+data4 <- read_excel("cleaned_annual_listing.xlsx", sheet = "Sheet1")
+
+# Ensure Year column is numeric and remove NA values
+data4$Year <- as.numeric(data4$Year)
+data4 <- data4[!is.na(data4$Year), ]
+
+# Create a dual-line chart with adjusted x-axis labels
+ggplot(data4, aes(x = Year)) +
+  geom_line(aes(y = Number_of_Work_Stoppages_Beginning, color = "Work Stoppages Beginning", group = 1), na.rm = TRUE) +
+  geom_line(aes(y = Number_of_Work_Stoppages_In_Effect, color = "Work Stoppages In Effect", group = 1), na.rm = TRUE) +
+  labs(title = "Comparison of Work Stoppages Beginning and In Effect Over the Years",
+       x = "Year",
+       y = "Number of Work Stoppages",
+       color = "Legend") +
+  theme_minimal() +
+  scale_x_continuous(breaks = seq(min(data4$Year, na.rm = TRUE), max(data4$Year, na.rm = TRUE), by = 5)) + # Show every 5th year
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels
+```
+
+
+The graph shows a clear decline in the number of work stoppages that both began and were in effect over the years, especially prominent from the mid-20th century onward. The "Work Stoppages Beginning" generally tracked slightly above "Work Stoppages In Effect," but both followed a similar downward trend. This decline may indicate changes in labor practices, regulations, or economic conditions affecting work stoppages over time.
+
+# page 2 
+
+## column
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(readxl)
+library(tidyr)
+
+# Replace with your data loading path if needed
+data <- read_excel("cleaned_annual_listing.xlsx", sheet = "Sheet1")
+
+# Clean and select necessary columns
+data <- data[3:nrow(data), c(1, 4, 5)]  # Adjust to skip header rows and select Year, Workers_Beginning, Workers_Effect
+colnames(data) <- c("Year", "Workers_Beginning", "Workers_Effect")
+
+# Convert columns to appropriate types
+data$Year <- as.integer(gsub("\\D", "", data$Year))
+data$Workers_Beginning <- as.numeric(gsub(",", "", data$Workers_Beginning))
+data$Workers_Effect <- as.numeric(gsub(",", "", data$Workers_Effect))
+
+# Reshape data for ggplot
+data_long <- pivot_longer(data, cols = c("Workers_Beginning", "Workers_Effect"), names_to = "Status", values_to = "Workers")
+
+# Plot the stacked area chart
+ggplot(data_long, aes(x = Year, y = Workers, fill = Status)) +
+  geom_area(alpha = 0.6) +
+  labs(title = "Comparison of Workers Involved at Beginning vs. In Effect", 
+       x = "Year", 
+       y = "Number of Workers (in thousands)") +
+  scale_fill_manual(values = c("Workers_Beginning" = "blue", "Workers_Effect" = "green")) +
+  theme_minimal()
+
+```
+
+This chart compares the number of workers involved in work stoppages at the beginning of the period (blue) versus those who remained involved (green) across several years. The high blue peaks show that a large number of workers were initially involved in stoppages, but the much smaller green areas indicate that far fewer workers were still involved as stoppages continued. This suggests a pattern where many workers initially participate in stoppages, but the number decreases over time.

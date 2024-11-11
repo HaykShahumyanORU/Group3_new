@@ -1,0 +1,75 @@
+---
+title: "VIZ_Quarto Static Dashboard_Example1"
+author: "Charnone Mukurazhizha"
+format: dashboard
+---
+
+# Page 1
+
+## Row
+```{r}
+library(dplyr)
+library(readxl)
+library(tidyr)
+library(readr)  # If you're reading CSV or similar formats
+library(ggplot2)
+
+
+data <- read_excel("/Users/edna/Desktop/LineGraph.xlsx")  
+```
+
+## Column
+```{r}
+data_clean <- data %>%
+  select(Year, `Total`, `Unemployed Percent\r\nof\r\nlabor\r\nforce`) %>%
+  rename(
+    Employed_Total = `Total`,
+    Unemployed_Percent = `Unemployed Percent\r\nof\r\nlabor\r\nforce`
+  ) %>%
+  mutate(
+    Employed_Total = as.numeric(Employed_Total),
+    Unemployed_Percent = as.numeric(Unemployed_Percent)
+  )
+```
+
+## Column
+```{r}
+ggplot(data_clean, aes(x = Employed_Total, y = Unemployed_Percent)) +
+  geom_line(color = "darkgreen", size = 1.2) +  # Change line color
+  labs(
+    title = "Unemployed vs. Employed",
+    x = "Employed",  # Updated x-axis title
+    y = "Unemployed"  # Updated y-axis title
+  ) +
+  theme_minimal(base_size = 15) +  # Increase base font size
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20, face = "bold", color = "black"),  # Center title, change font size and color
+    axis.title.x = element_text(size = 16, face = "bold", color = "#0072B2"),  # X-axis title
+    axis.title.y = element_text(size = 16, face = "bold", color = "#0072B2"),  # Y-axis title
+    axis.text = element_text(size = 14)  # Axis text size
+```
+
+## Row
+```{r}
+#\ title: Pressure Plot
+```
+
+# Page 2
+
+## Row
+```{r}
+#\ title: Pressure Plot
+plot(pressure)
+```
+
+## Row
+
+```{r}
+#\ title: Pressure
+boxplot(pressure)
+```
+
+
+
+
+
