@@ -407,3 +407,55 @@ ggplot(data, aes(x = reorder(Occupations, -`Total Number of Workers`),
   )
 ```
 
+## nov 16th
+
+## Stacked Area Chart
+**Variables: Occupation, Men: Number of Workers, Women: Number of Workers**
+
+### Load Libraries 
+```{r, message=FALSE, warning=FALSE}
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+```
+
+### Load Dataset
+```{r, message=FALSE, warning=FALSE}
+data <- read_excel("cpsaat39.xlsx", range = "A298:F306", 
+                   col_names = c("Occupations", "Skip1", "Skip2", "Total_Male_Workers", "Skip3", "Total_Female_Workers"))
+
+# Drop unwanted columns
+data <- data %>%
+  select(Occupations, Total_Male_Workers, Total_Female_Workers)
+
+# Reshape data to long format (needed for stacked area plot)
+data_long <- data %>%
+  pivot_longer(cols = c(Total_Male_Workers, Total_Female_Workers),
+               names_to = "Gender",
+               values_to = "Number_of_Workers")
+```
+
+### Create Visualization
+```{r, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 6
+ggplot(data_long, aes(x = Occupations, y = Number_of_Workers, fill = Gender, group = Gender)) +
+  geom_area(alpha = 0.6, size = 0.4, color = "black") +
+  scale_fill_manual(
+    values = c("Total_Male_Workers" = "blue", "Total_Female_Workers" = "pink"),
+    labels = c("Total_Male_Workers" = "Total Male Workers", "Total_Female_Workers" = "Total Female Workers")
+  ) +
+  theme_minimal() +
+  labs(title = "Gender Distribution of Workers by Food Prep and Service Occupations",
+       x = "Occupations",
+       y = "Number of Workers") +
+  theme(
+    plot.title = element_text(face = "bold", size = 14, hjust = 0.5),
+    axis.title.x = element_text(margin = margin(r = 10), face = "bold"),
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 9),
+    axis.title.y = element_text(margin = margin(r = 10), face = "bold"),
+    axis.text.y = element_text(size = 9),
+    legend.title = element_text(face = "bold"),
+    legend.text = element_text(size = 9))
+```

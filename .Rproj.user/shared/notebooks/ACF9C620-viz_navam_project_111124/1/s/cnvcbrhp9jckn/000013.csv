@@ -1,0 +1,1 @@
+"0","text(x = 1, y = q1_value, labels = paste(""25th Percentile: $"", format(q1_value, big.mark = "","")), pos = 3, col = ""darkgreen"")"

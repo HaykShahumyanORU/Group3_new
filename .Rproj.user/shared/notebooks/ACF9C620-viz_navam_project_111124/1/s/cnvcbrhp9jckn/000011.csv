@@ -1,0 +1,8 @@
+"0",""
+"0","# Calculate median and quartiles"
+"0","median_value <- median(data$Median_weekly_earnings, na.rm = TRUE)"
+"0","q1_value <- quantile(data$Median_weekly_earnings, 0.25, na.rm = TRUE)"
+"0","q3_value <- quantile(data$Median_weekly_earnings, 0.75, na.rm = TRUE)"
+"0",""
+"0","# Add labels for median and quartiles with darker colors"
+"0","text(x = 1, y = median_value, labels = paste(""Median: $"", format(median_value, big.mark = "","")), pos = 3, col = ""darkblue"")"

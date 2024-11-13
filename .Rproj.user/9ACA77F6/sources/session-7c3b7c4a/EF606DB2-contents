@@ -1,0 +1,107 @@
+---
+title: "Projects Sem Labor Stats"
+author: "Pratiti Navam"
+---
+
+All charts made in r studio or shiny and 1-3 sentence summary with each visualization
+
+## Nov 2: create a box plot comparing educational attainment and median usual weekly earnings
+```{r}
+# Import the dataset
+data <- read.csv("education.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Convert Median Weekly Earnings to numeric (remove commas if needed)
+data$Median_weekly_earnings <- as.numeric(gsub(",", "", data$Median.usual.weekly.earnings....))
+
+# Create a simple box plot for Median Weekly Earnings
+boxplot(
+  data$Median_weekly_earnings,
+  main = "Box Plot of Median Weekly Earnings",
+  ylab = "Median Weekly Earnings ($)",
+  col = "lightblue",
+  border = "darkblue",
+  xaxs = "i"  # Adjust x-axis to be tighter
+)
+
+# Calculate median and quartiles
+median_value <- median(data$Median_weekly_earnings, na.rm = TRUE)
+q1_value <- quantile(data$Median_weekly_earnings, 0.25, na.rm = TRUE)
+q3_value <- quantile(data$Median_weekly_earnings, 0.75, na.rm = TRUE)
+
+# Add labels for median and quartiles with darker colors
+text(x = 1, y = median_value, labels = paste("Median: $", format(median_value, big.mark = ",")), pos = 3, col = "darkblue")
+text(x = 1, y = q1_value, labels = paste("25th Percentile: $", format(q1_value, big.mark = ",")), pos = 3, col = "darkgreen")
+text(x = 1, y = q3_value + 100, labels = paste("75th Percentile: $", format(q3_value, big.mark = ",")), pos = 3, col = "darkred") 
+```
+The dataset represents Median Weekly Earnings categorized by various levels of educational attainment. The box plot visualizes that the median weekly earnings are approximately 1,000, with the 25th percentile around 800 and the 75th percentile at approximately 1,200, indicating that 50% of the data falls within this range. This visualization highlights a notable disparity in earnings, suggesting that individuals with higher educational attainment generally earn significantly more, thereby emphasizing the economic value of education.
+
+
+## Nov 9: create a bar chart comparing educational attainment and unemployment rate
+```{r}
+# Load necessary libraries
+library(ggplot2)
+
+# Import the dataset
+data <- read.csv("education.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Select only the relevant columns
+selected_data <- data[, c("Educational.attainment", "Unemployment.rate....")]
+
+# Rename columns for readability
+colnames(selected_data) <- c("Educational Attainment", "Unemployment Rate (%)")
+
+# Convert Unemployment Rate to numeric (remove commas if needed)
+selected_data$`Unemployment Rate (%)` <- as.numeric(gsub(",", "", selected_data$`Unemployment Rate (%)`))
+
+# Create a bar chart with gradient colors and no legend
+ggplot(selected_data, aes(x = reorder(`Educational Attainment`, `Unemployment Rate (%)`), y = `Unemployment Rate (%)`, fill = `Unemployment Rate (%)`)) +
+  geom_bar(stat = "identity") +
+  scale_fill_gradient(low = "lightblue", high = "darkblue") +  # Gradient color from light to dark blue
+  labs(
+    title = "Unemployment Rate by Educational Attainment",
+    x = "Educational Attainment",
+    y = "Unemployment Rate (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels for readability
+    legend.position = "none"  # Remove the legend
+  )
+```
+The box plot illustrates the relationship between educational attainment and unemployment rates, showcasing how higher levels of education are generally associated with lower unemployment. Each point represents a specific educational category, with color intensity reflecting the unemployment rate—darker shades indicating higher rates. This visual, sourced from the Bureau of Labor Statistics (BLS), emphasizes the importance of education in influencing job market outcomes, highlighting that individuals with higher educational qualifications tend to experience greater job stability.
+
+
+
+## Nov 16: create a scatter plot comparing median usual weekly earnings and unemployment rate
+```{r}
+# Load necessary libraries
+library(ggplot2)
+
+# Import the dataset
+data <- read.csv("education.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Select and rename relevant columns for clarity
+selected_data <- data[, c("Median.usual.weekly.earnings....", "Unemployment.rate....")]
+colnames(selected_data) <- c("Median_Weekly_Earnings", "Unemployment_Rate")
+
+# Convert both columns to numeric (remove commas if needed)
+selected_data$Median_Weekly_Earnings <- as.numeric(gsub(",", "", selected_data$Median_Weekly_Earnings))
+selected_data$Unemployment_Rate <- as.numeric(gsub(",", "", selected_data$Unemployment_Rate))
+
+# Create the scatter plot
+ggplot(selected_data, aes(x = Median_Weekly_Earnings, y = Unemployment_Rate)) +
+  geom_point(color = "blue", size = 3) +                        # Points with color and size
+  labs(
+    title = "Scatter Plot of Median Weekly Earnings vs. Unemployment Rate",
+    x = "Median Weekly Earnings ($)",
+    y = "Unemployment Rate (%)"
+  ) +
+  theme_minimal()                                               # Apply a clean theme
+
+```
+
+This scatter plot explores the relationship between Median Usual Weekly Earnings and the Unemployment Rate for various levels of educational attainment, based on U.S. Bureau of Labor Statistics data. Generally, the data show that as median weekly earnings increase, the unemployment rate tends to decrease, highlighting an inverse relationship between earnings and unemployment risk. This trend underscores how higher educational attainment, often associated with higher earnings, can provide greater employment stability.
+
+## Nov 23: create a heatmap comparing total fatal injuries and industry
+
+## Nov 30: create a dot plot comparing fatal injury causes and industry
